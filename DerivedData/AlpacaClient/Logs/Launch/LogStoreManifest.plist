@@ -5,6 +5,97 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>761C719F-CECC-4C5B-9F4D-4EBBE815F76F</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>7ACD538B-DAEE-47CD-B368-958A46DDC1D0</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-AlpacaClient-2023.02.06_16-14-52-+0200.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlpacaClient project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlpacaClient</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AlpacaClient</string>
+			<key>timeStartedRecording</key>
+			<real>697385692.21205294</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>761C719F-CECC-4C5B-9F4D-4EBBE815F76F</string>
+		</dict>
+		<key>BCAFFCBF-6E69-48E6-B9DC-DFAABF623A17</key>
+		<dict>
+			<key>auxiliaryLogUniqueIdentifier</key>
+			<string>50657D5C-3211-47D2-9233-BD85054BFB11</string>
+			<key>auxiliaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>className</key>
+			<string>IDESchemeActionsInvocationRecord</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>com.apple.dt.IDE.LaunchSchemeAction</string>
+			<key>fileName</key>
+			<string>Run-AlpacaClient-2023.02.06_20-21-40-+0200.xcresult</string>
+			<key>hasAuxiliaryLog</key>
+			<true/>
+			<key>hasConsoleLog</key>
+			<true/>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AlpacaClient project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AlpacaClient</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AlpacaClient</string>
+			<key>timeStartedRecording</key>
+			<real>697400500.36752403</real>
+			<key>timeStoppedRecording</key>
+			<real>0.0</real>
+			<key>title</key>
+			<string>Run AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>BCAFFCBF-6E69-48E6-B9DC-DFAABF623A17</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
