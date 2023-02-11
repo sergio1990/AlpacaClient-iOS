@@ -6,6 +6,62 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>001C035A-9538-452F-A3AA-5A77D4B20205</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>001C035A-9538-452F-A3AA-5A77D4B20205.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817862.18520105</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>001C035A-9538-452F-A3AA-5A77D4B20205</string>
+		</dict>
+		<key>04EE9C3C-50AD-4E5E-A409-5DD77471003F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>04EE9C3C-50AD-4E5E-A409-5DD77471003F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697819040.144503</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>04EE9C3C-50AD-4E5E-A409-5DD77471003F</string>
+		</dict>
 		<key>05FC71CD-00F5-45FE-AFE2-773325F4A6EF</key>
 		<dict>
 			<key>className</key>
@@ -89,6 +145,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>086106D1-0158-464E-9748-5FBCB32E688E</string>
+		</dict>
+		<key>09F5C4FE-AF7F-4A12-BAF7-90D8A61D8D84</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>09F5C4FE-AF7F-4A12-BAF7-90D8A61D8D84.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817867.31440306</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>09F5C4FE-AF7F-4A12-BAF7-90D8A61D8D84</string>
 		</dict>
 		<key>0A1AA234-5CB6-4813-8990-E8B2FA8AC500</key>
 		<dict>
@@ -286,6 +370,34 @@
 			<key>uniqueIdentifier</key>
 			<string>0E3A1BE5-A7C3-4EE2-9E06-E4347869E8CB</string>
 		</dict>
+		<key>0E3CC22F-B575-4F97-8AA3-1DBD82E436FD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0E3CC22F-B575-4F97-8AA3-1DBD82E436FD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817898.61301196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>0E3CC22F-B575-4F97-8AA3-1DBD82E436FD</string>
+		</dict>
 		<key>0FC0DBBE-DB86-49B1-B70A-73A31E2B5E11</key>
 		<dict>
 			<key>className</key>
@@ -341,6 +453,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>0FEB5315-1D50-4FBD-9351-2CB45BF4FE97</string>
+		</dict>
+		<key>109AF473-E2F9-45BF-A47A-BFF3B90B2CBD</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>109AF473-E2F9-45BF-A47A-BFF3B90B2CBD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817862.18520105</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>109AF473-E2F9-45BF-A47A-BFF3B90B2CBD</string>
 		</dict>
 		<key>11014E3D-206D-46D4-9BEF-38949409176E</key>
 		<dict>
@@ -454,6 +594,34 @@
 			<key>uniqueIdentifier</key>
 			<string>179051CE-34F0-4F40-8801-0D768605B612</string>
 		</dict>
+		<key>19DA725F-6FEB-4933-9688-819AEE06A701</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>19DA725F-6FEB-4933-9688-819AEE06A701.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817867.31440306</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>19DA725F-6FEB-4933-9688-819AEE06A701</string>
+		</dict>
 		<key>1C9A8230-7286-4CD1-B103-B6A86E1765A1</key>
 		<dict>
 			<key>className</key>
@@ -509,6 +677,118 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>1F96AC58-C425-4CFF-A6AC-101B914A7629</string>
+		</dict>
+		<key>2345DE2D-AA99-494B-BFEA-F087FF26F203</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2345DE2D-AA99-494B-BFEA-F087FF26F203.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817662.16941404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>2345DE2D-AA99-494B-BFEA-F087FF26F203</string>
+		</dict>
+		<key>261FEC01-D6E2-4147-81AD-846AE650EC79</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>261FEC01-D6E2-4147-81AD-846AE650EC79.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817884.68619895</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>261FEC01-D6E2-4147-81AD-846AE650EC79</string>
+		</dict>
+		<key>2C8DA4E3-56A6-4F02-8F39-2195A86A8F34</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2C8DA4E3-56A6-4F02-8F39-2195A86A8F34.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817884.68619895</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>2C8DA4E3-56A6-4F02-8F39-2195A86A8F34</string>
+		</dict>
+		<key>2D37F8E1-F71E-435C-9685-9894D657A7BC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>2D37F8E1-F71E-435C-9685-9894D657A7BC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817884.68619895</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>2D37F8E1-F71E-435C-9685-9894D657A7BC</string>
 		</dict>
 		<key>2DED7396-F008-4B9E-B07A-AE0761E79F60</key>
 		<dict>
@@ -594,6 +874,34 @@
 			<key>uniqueIdentifier</key>
 			<string>3026F8FF-BBCF-4242-B82E-118E6754C9D4</string>
 		</dict>
+		<key>309FCED3-9FD5-4F11-99D8-51FEBBAD0365</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>309FCED3-9FD5-4F11-99D8-51FEBBAD0365.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817546.82011497</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>309FCED3-9FD5-4F11-99D8-51FEBBAD0365</string>
+		</dict>
 		<key>30B1A10F-D287-4445-8511-9BA00D999D59</key>
 		<dict>
 			<key>className</key>
@@ -621,6 +929,62 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>30B1A10F-D287-4445-8511-9BA00D999D59</string>
+		</dict>
+		<key>31FF69A5-7DA4-4003-95DC-39EDCE57CD76</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>31FF69A5-7DA4-4003-95DC-39EDCE57CD76.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817546.82011497</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>31FF69A5-7DA4-4003-95DC-39EDCE57CD76</string>
+		</dict>
+		<key>3607F4D6-34B6-4A9D-B01D-6EB648F8DD2F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3607F4D6-34B6-4A9D-B01D-6EB648F8DD2F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817898.61301196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>3607F4D6-34B6-4A9D-B01D-6EB648F8DD2F</string>
 		</dict>
 		<key>39EB4669-DC34-411B-BBEE-E8399B38EC89</key>
 		<dict>
@@ -706,6 +1070,34 @@
 			<key>uniqueIdentifier</key>
 			<string>3A680C53-D384-44A6-8E40-0EA4BF40FB0D</string>
 		</dict>
+		<key>3AAC0F96-5DC1-4C78-AAF5-E6CFD3926B7F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3AAC0F96-5DC1-4C78-AAF5-E6CFD3926B7F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818922.18388498</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>3AAC0F96-5DC1-4C78-AAF5-E6CFD3926B7F</string>
+		</dict>
 		<key>3B1C5536-13C3-4D8E-8516-F7039C735517</key>
 		<dict>
 			<key>className</key>
@@ -733,6 +1125,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>3B1C5536-13C3-4D8E-8516-F7039C735517</string>
+		</dict>
+		<key>3DEF8333-D282-4EC7-86AE-852AAF7070A5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>3DEF8333-D282-4EC7-86AE-852AAF7070A5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817846.05258703</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>3DEF8333-D282-4EC7-86AE-852AAF7070A5</string>
 		</dict>
 		<key>414BACEC-0718-4C13-A4B9-192EE136104D</key>
 		<dict>
@@ -846,6 +1266,34 @@
 			<key>uniqueIdentifier</key>
 			<string>44E72B93-5A73-456F-AB49-5ED931DC9EE7</string>
 		</dict>
+		<key>45DC6213-CEF1-4D26-A7C9-7FAF376E0FB3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>45DC6213-CEF1-4D26-A7C9-7FAF376E0FB3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817818.70189297</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>45DC6213-CEF1-4D26-A7C9-7FAF376E0FB3</string>
+		</dict>
 		<key>4E36EA78-49AC-46E9-9B27-88335569DE4D</key>
 		<dict>
 			<key>className</key>
@@ -873,6 +1321,90 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>4E36EA78-49AC-46E9-9B27-88335569DE4D</string>
+		</dict>
+		<key>4EF7A547-DC25-4433-8D1E-AC47515667AF</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4EF7A547-DC25-4433-8D1E-AC47515667AF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818922.18388498</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>4EF7A547-DC25-4433-8D1E-AC47515667AF</string>
+		</dict>
+		<key>52C19A7C-1763-4A82-902E-5CE78719C602</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>52C19A7C-1763-4A82-902E-5CE78719C602.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817618.25561404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>52C19A7C-1763-4A82-902E-5CE78719C602</string>
+		</dict>
+		<key>559533EE-BD63-4EBF-BEC3-D085CD39420F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>559533EE-BD63-4EBF-BEC3-D085CD39420F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817846.05258703</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>559533EE-BD63-4EBF-BEC3-D085CD39420F</string>
 		</dict>
 		<key>566A099E-8839-44D6-ADA8-4E2D2AC6BD01</key>
 		<dict>
@@ -957,6 +1489,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>5725B1E1-6D14-499D-96C3-77B446FAAE13</string>
+		</dict>
+		<key>57A1D845-11C5-4815-A358-5614777965F1</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>57A1D845-11C5-4815-A358-5614777965F1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817942.43395901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>57A1D845-11C5-4815-A358-5614777965F1</string>
 		</dict>
 		<key>59E6E584-AED2-4D66-B292-0B1E5C0C1997</key>
 		<dict>
@@ -1126,6 +1686,62 @@
 			<key>uniqueIdentifier</key>
 			<string>6A4AED4F-AD99-40D2-84D5-803305043FE5</string>
 		</dict>
+		<key>6AC1453F-5437-4886-AA01-788BA51F6823</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6AC1453F-5437-4886-AA01-788BA51F6823.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817884.68619895</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>6AC1453F-5437-4886-AA01-788BA51F6823</string>
+		</dict>
+		<key>7126D282-8CE8-4C7F-8AC4-FD93495C8963</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>7126D282-8CE8-4C7F-8AC4-FD93495C8963.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697819040.144503</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>7126D282-8CE8-4C7F-8AC4-FD93495C8963</string>
+		</dict>
 		<key>73614FBD-41B5-420B-9DD3-624D8EC999CC</key>
 		<dict>
 			<key>className</key>
@@ -1182,6 +1798,34 @@
 			<key>uniqueIdentifier</key>
 			<string>78129D1F-6448-48C1-BDE3-53FE2A7C06B3</string>
 		</dict>
+		<key>794738CC-D13E-4E1B-A592-BB06C8C6EB0F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>794738CC-D13E-4E1B-A592-BB06C8C6EB0F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697818922.18388498</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>794738CC-D13E-4E1B-A592-BB06C8C6EB0F</string>
+		</dict>
 		<key>79A1EE6A-C881-4030-B885-E560BCA5E5A4</key>
 		<dict>
 			<key>className</key>
@@ -1237,6 +1881,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>82648778-1063-4F0B-93C7-AF544F182258</string>
+		</dict>
+		<key>83299CAA-54DC-4ED3-9DD3-98C821969EBB</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>83299CAA-54DC-4ED3-9DD3-98C821969EBB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817706.17845702</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>83299CAA-54DC-4ED3-9DD3-98C821969EBB</string>
 		</dict>
 		<key>84EB314E-1F52-4EB3-9D27-7E20BC0DB784</key>
 		<dict>
@@ -1378,6 +2050,62 @@
 			<key>uniqueIdentifier</key>
 			<string>88F6ACE0-3470-4975-B486-1DC0149C48F0</string>
 		</dict>
+		<key>8AFFE331-B9A1-443C-B1A2-10EF5562F47A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8AFFE331-B9A1-443C-B1A2-10EF5562F47A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817618.25561404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>8AFFE331-B9A1-443C-B1A2-10EF5562F47A</string>
+		</dict>
+		<key>8B759DAB-D92B-4F9A-BA42-1A99FD5BE641</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>8B759DAB-D92B-4F9A-BA42-1A99FD5BE641.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818922.18388498</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>8B759DAB-D92B-4F9A-BA42-1A99FD5BE641</string>
+		</dict>
 		<key>8D5E67DE-6D4C-4D5C-A112-AC8536C04C4E</key>
 		<dict>
 			<key>className</key>
@@ -1517,6 +2245,62 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>8EF20B0C-C449-400A-85F5-36F2923C9C79</string>
+		</dict>
+		<key>913845D7-A0A9-4042-A03F-C4CBCABF001D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>913845D7-A0A9-4042-A03F-C4CBCABF001D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817662.16941404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>913845D7-A0A9-4042-A03F-C4CBCABF001D</string>
+		</dict>
+		<key>91ABBA62-D359-43DA-B1B5-F7B8390CB925</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>91ABBA62-D359-43DA-B1B5-F7B8390CB925.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817546.82011497</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>91ABBA62-D359-43DA-B1B5-F7B8390CB925</string>
 		</dict>
 		<key>91F22032-FB3B-409B-BB55-73EAE1A6F04A</key>
 		<dict>
@@ -1770,6 +2554,34 @@
 			<key>uniqueIdentifier</key>
 			<string>A32F13D3-561F-4F56-BD28-1CCFDB0AA869</string>
 		</dict>
+		<key>A38B62B7-F8C1-49BE-80BC-E6E5F1D99C83</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A38B62B7-F8C1-49BE-80BC-E6E5F1D99C83.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817942.43395901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>A38B62B7-F8C1-49BE-80BC-E6E5F1D99C83</string>
+		</dict>
 		<key>A5B6EBA7-4D56-474C-90F3-27D019593254</key>
 		<dict>
 			<key>className</key>
@@ -1798,6 +2610,34 @@
 			<key>uniqueIdentifier</key>
 			<string>A5B6EBA7-4D56-474C-90F3-27D019593254</string>
 		</dict>
+		<key>A609F945-B5AA-4475-977F-68F1685E9A5A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A609F945-B5AA-4475-977F-68F1685E9A5A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817546.82011497</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>A609F945-B5AA-4475-977F-68F1685E9A5A</string>
+		</dict>
 		<key>A82E556A-1C05-435E-9129-5239368A4553</key>
 		<dict>
 			<key>className</key>
@@ -1825,6 +2665,62 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>A82E556A-1C05-435E-9129-5239368A4553</string>
+		</dict>
+		<key>AA1C1A23-690B-447F-904B-20D18C83C237</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AA1C1A23-690B-447F-904B-20D18C83C237.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817867.31440306</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>AA1C1A23-690B-447F-904B-20D18C83C237</string>
+		</dict>
+		<key>AAF9DC9B-5C74-4A5D-BE11-FAE39B624424</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>AAF9DC9B-5C74-4A5D-BE11-FAE39B624424.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817662.16941404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>AAF9DC9B-5C74-4A5D-BE11-FAE39B624424</string>
 		</dict>
 		<key>AC2A6D80-9811-4FE5-9904-462F6BA66347</key>
 		<dict>
@@ -1938,6 +2834,90 @@
 			<key>uniqueIdentifier</key>
 			<string>B042C60A-A872-49CB-B1CF-0442250DF240</string>
 		</dict>
+		<key>B09337FB-AA01-4579-BC89-06BF8512570B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B09337FB-AA01-4579-BC89-06BF8512570B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818632.82671905</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>B09337FB-AA01-4579-BC89-06BF8512570B</string>
+		</dict>
+		<key>B25C127E-0C19-42E5-B935-FB1FFB00058F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B25C127E-0C19-42E5-B935-FB1FFB00058F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817898.61301196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>B25C127E-0C19-42E5-B935-FB1FFB00058F</string>
+		</dict>
+		<key>B31B19FB-A828-4D13-B1D6-6C1C0D90BA1A</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B31B19FB-A828-4D13-B1D6-6C1C0D90BA1A.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697819040.144503</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>B31B19FB-A828-4D13-B1D6-6C1C0D90BA1A</string>
+		</dict>
 		<key>B511B86D-491A-4FBF-8915-849E897E5586</key>
 		<dict>
 			<key>className</key>
@@ -1993,6 +2973,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>B9250994-123B-4FBA-8759-707F6D49B314</string>
+		</dict>
+		<key>B9DADE5D-DB2C-44C8-A7B3-3A3F17AC4F8C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B9DADE5D-DB2C-44C8-A7B3-3A3F17AC4F8C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817846.05258703</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>B9DADE5D-DB2C-44C8-A7B3-3A3F17AC4F8C</string>
 		</dict>
 		<key>BABE6A28-8B28-4D2F-B441-43FE6F4719C4</key>
 		<dict>
@@ -2050,6 +3058,90 @@
 			<key>uniqueIdentifier</key>
 			<string>BB380775-44FD-4134-8417-6EE199F92FC3</string>
 		</dict>
+		<key>BDA0FC02-905D-4ED8-BE2F-3CDE783EC665</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>BDA0FC02-905D-4ED8-BE2F-3CDE783EC665.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817662.16941404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>BDA0FC02-905D-4ED8-BE2F-3CDE783EC665</string>
+		</dict>
+		<key>C32C0317-C45C-48B6-A622-1123A7AB6959</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C32C0317-C45C-48B6-A622-1123A7AB6959.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817867.31440306</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>C32C0317-C45C-48B6-A622-1123A7AB6959</string>
+		</dict>
+		<key>C443D0B5-F448-4530-8991-898A3838CE11</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C443D0B5-F448-4530-8991-898A3838CE11.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817818.70189297</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>C443D0B5-F448-4530-8991-898A3838CE11</string>
+		</dict>
 		<key>C62E7A72-D462-4982-A95F-22FB5355AF86</key>
 		<dict>
 			<key>className</key>
@@ -2106,6 +3198,62 @@
 			<key>uniqueIdentifier</key>
 			<string>CBF285F3-5E42-4820-A2ED-3C38D9D66880</string>
 		</dict>
+		<key>CC21C403-FE2B-4B82-89B2-11A4623E3810</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CC21C403-FE2B-4B82-89B2-11A4623E3810.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817618.25561404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>CC21C403-FE2B-4B82-89B2-11A4623E3810</string>
+		</dict>
+		<key>CFA29F4B-1A24-41AA-91B6-669220FFE606</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CFA29F4B-1A24-41AA-91B6-669220FFE606.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817846.05258703</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>CFA29F4B-1A24-41AA-91B6-669220FFE606</string>
+		</dict>
 		<key>D2D880FD-DEA0-4A48-A900-1633B625D6F5</key>
 		<dict>
 			<key>className</key>
@@ -2134,6 +3282,34 @@
 			<key>uniqueIdentifier</key>
 			<string>D2D880FD-DEA0-4A48-A900-1633B625D6F5</string>
 		</dict>
+		<key>D8815DF6-4958-43D7-9762-A9F684F90489</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D8815DF6-4958-43D7-9762-A9F684F90489.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817942.43395901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>D8815DF6-4958-43D7-9762-A9F684F90489</string>
+		</dict>
 		<key>D8964BAD-D787-430F-B4B0-057E90C7687E</key>
 		<dict>
 			<key>className</key>
@@ -2161,6 +3337,90 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>D8964BAD-D787-430F-B4B0-057E90C7687E</string>
+		</dict>
+		<key>D953DFF0-B46D-4379-9507-9A217C819BA8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>D953DFF0-B46D-4379-9507-9A217C819BA8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818632.82671905</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>D953DFF0-B46D-4379-9507-9A217C819BA8</string>
+		</dict>
+		<key>DE069DBD-D4AB-429F-86F9-7D2D6A5563B3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DE069DBD-D4AB-429F-86F9-7D2D6A5563B3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697819040.144503</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>DE069DBD-D4AB-429F-86F9-7D2D6A5563B3</string>
+		</dict>
+		<key>DFA8345A-7A8E-4D30-9BB7-BD00A3C05055</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DFA8345A-7A8E-4D30-9BB7-BD00A3C05055.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817862.18520105</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>DFA8345A-7A8E-4D30-9BB7-BD00A3C05055</string>
 		</dict>
 		<key>E1C5A709-AFA9-4383-8ABF-8BA99747552F</key>
 		<dict>
@@ -2274,6 +3534,90 @@
 			<key>uniqueIdentifier</key>
 			<string>E5BA7563-26E1-485D-A6C5-6F51CF78D20D</string>
 		</dict>
+		<key>E5D21DC4-1882-43CB-B3CB-0710FCB98ECC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E5D21DC4-1882-43CB-B3CB-0710FCB98ECC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697818632.82671905</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>E5D21DC4-1882-43CB-B3CB-0710FCB98ECC</string>
+		</dict>
+		<key>E67FC625-F7D8-406F-AAB5-D16921E7935B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E67FC625-F7D8-406F-AAB5-D16921E7935B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817862.18520105</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>E67FC625-F7D8-406F-AAB5-D16921E7935B</string>
+		</dict>
+		<key>E7A451CC-D36A-4107-95F2-8327EB07401D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E7A451CC-D36A-4107-95F2-8327EB07401D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817818.70189297</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>E7A451CC-D36A-4107-95F2-8327EB07401D</string>
+		</dict>
 		<key>E7D45F6A-2FD6-4BF0-9C97-2BDEC464CDB9</key>
 		<dict>
 			<key>className</key>
@@ -2302,6 +3646,34 @@
 			<key>uniqueIdentifier</key>
 			<string>E7D45F6A-2FD6-4BF0-9C97-2BDEC464CDB9</string>
 		</dict>
+		<key>E84A6F20-9424-4443-9B59-DC823EC35941</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E84A6F20-9424-4443-9B59-DC823EC35941.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697818632.82671905</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>E84A6F20-9424-4443-9B59-DC823EC35941</string>
+		</dict>
 		<key>E95CB200-666A-418A-BE63-08CF2FF751D3</key>
 		<dict>
 			<key>className</key>
@@ -2329,6 +3701,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>E95CB200-666A-418A-BE63-08CF2FF751D3</string>
+		</dict>
+		<key>EC000DC0-711A-4C67-B97E-3666D8789925</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>EC000DC0-711A-4C67-B97E-3666D8789925.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817618.25561404</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>EC000DC0-711A-4C67-B97E-3666D8789925</string>
 		</dict>
 		<key>EDE85AA1-03AE-41ED-AE83-7276D03C1595</key>
 		<dict>
@@ -2385,6 +3785,62 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>EE2F04E4-9A96-47B1-856C-3A8C0C614645</string>
+		</dict>
+		<key>F09615AA-2012-4536-A538-61C0AEA29947</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F09615AA-2012-4536-A538-61C0AEA29947.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817818.70189297</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>F09615AA-2012-4536-A538-61C0AEA29947</string>
+		</dict>
+		<key>F154C699-BEDC-41EC-87D3-797223790637</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F154C699-BEDC-41EC-87D3-797223790637.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817942.43395901</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>F154C699-BEDC-41EC-87D3-797223790637</string>
 		</dict>
 		<key>F2FEFC7D-5A91-4B56-BCE8-572A24DC0A0E</key>
 		<dict>
@@ -2526,6 +3982,34 @@
 			<key>uniqueIdentifier</key>
 			<string>F651458E-E1CE-49DA-B6BC-8A112B71FFB8</string>
 		</dict>
+		<key>F7C7234E-3A57-44B8-9DF8-DBFDCAE59C3C</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>F7C7234E-3A57-44B8-9DF8-DBFDCAE59C3C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJsdWVwcmludFByb3ZpZGVyIjp7fX0sImJsdWVwcmludFByb3ZpZGVyX3Byb3ZpZGVyRmlsZVBhdGhTdHJpbmciOiJcL1VzZXJzXC9zZXJnaW9cL1dvcmtcL2xlYXJuaW5nc1wvaW9zXC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudFwvQWxwYWNhQ2xpZW50Lnhjb2RlcHJvaiJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817706.17845702</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>F7C7234E-3A57-44B8-9DF8-DBFDCAE59C3C</string>
+		</dict>
 		<key>F8003AFB-6FAF-4E83-8187-41241DC0309B</key>
 		<dict>
 			<key>className</key>
@@ -2553,6 +4037,62 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>F8003AFB-6FAF-4E83-8187-41241DC0309B</string>
+		</dict>
+		<key>FBB0BED9-95F7-40CF-B92B-7FC5EF0D6277</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FBB0BED9-95F7-40CF-B92B-7FC5EF0D6277.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJ0eXBlIjp7ImJ1aWxkU3lzdGVtVGFzayI6e319LCJidWlsZFN5c3RlbVRhc2tfYnVpbGRUYXNrIjoiUHJlcGFyZSBidWlsZCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817898.61301196</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>FBB0BED9-95F7-40CF-B92B-7FC5EF0D6277</string>
+		</dict>
+		<key>FBE65BF7-13EF-4D15-AA1B-BCBE3020A04B</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FBE65BF7-13EF-4D15-AA1B-BCBE3020A04B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0Rlcml2ZWREYXRhXC9BbHBhY2FDbGllbnRcL1NvdXJjZVBhY2thZ2VzXC9jaGVja291dHNcL0NvY29hQXN5bmNTb2NrZXQiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IkNvY29hQXN5bmNTb2NrZXQifQ==</string>
+			<key>timeStartedRecording</key>
+			<real>697817706.17845702</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>FBE65BF7-13EF-4D15-AA1B-BCBE3020A04B</string>
 		</dict>
 		<key>FE28128B-A627-4393-8C3C-EEB21771E17D</key>
 		<dict>
@@ -2609,6 +4149,34 @@
 			<string>Build AlpacaClient</string>
 			<key>uniqueIdentifier</key>
 			<string>FFC4C252-6EBD-42BE-B1AB-6072E19798D3</string>
+		</dict>
+		<key>FFF179C1-F252-448B-9DD1-0FEF1CC51A05</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FFF179C1-F252-448B-9DD1-0FEF1CC51A05.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>signature</key>
+			<string>eyJibHVlcHJpbnRfYmx1ZXByaW50VmFyaWFudCI6eyJnZW5lcmljIjp7fX0sImJsdWVwcmludF9wcm92aWRlckZpbGVQYXRoU3RyaW5nIjoiXC9Vc2Vyc1wvc2VyZ2lvXC9Xb3JrXC9sZWFybmluZ3NcL2lvc1wvQWxwYWNhQ2xpZW50XC9BbHBhY2FDbGllbnRcL0FscGFjYUNsaWVudC54Y29kZXByb2oiLCJ0eXBlIjp7ImJsdWVwcmludCI6e319LCJibHVlcHJpbnRfYmx1ZXByaW50SWRlbnRpZmllciI6IjQ5NjdENDNCMjk5MTNGQkQwMDU5MjA5NCJ9</string>
+			<key>timeStartedRecording</key>
+			<real>697817706.17845702</real>
+			<key>timeStoppedRecording</key>
+			<real>63113904000</real>
+			<key>title</key>
+			<string>Build AlpacaClient</string>
+			<key>uniqueIdentifier</key>
+			<string>FFF179C1-F252-448B-9DD1-0FEF1CC51A05</string>
 		</dict>
 	</dict>
 </dict>

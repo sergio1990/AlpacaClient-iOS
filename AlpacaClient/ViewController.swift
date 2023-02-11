@@ -82,12 +82,16 @@ extension ViewController: GCDAsyncUdpSocketDelegate {
     
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
         let stringData = String(data: data, encoding: .utf8)
-//        dynamic var host: String
-//        dynamic var port: UInt16
-//
-//        GCDAsyncUdpSocket.getHost(AutoreleasingUnsafeMutablePointer<NSString?>(&host), port: UnsafeMutablePointer<UInt16>?(&port), fromAddress: address)
         
-        print("Received \(stringData)")
+        let addrBytes = address[4...7]
+        let portBytes = address[2...3]
+        
+        let hostString = addrBytes
+            .map { String($0) }
+            .joined(separator: ".")
+        let port = UInt16(bigEndian: portBytes.withUnsafeBytes { $0.pointee })
+        
+        print("Received \(stringData) from \(hostString):\(port)")
         labelReceive.text = stringData
     }
 }
