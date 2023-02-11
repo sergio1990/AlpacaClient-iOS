@@ -13,6 +13,7 @@
 		4967D44729913FBD00592094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44529913FBD00592094 /* Main.storyboard */; };
 		4967D44929913FC000592094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44829913FC000592094 /* Assets.xcassets */; };
 		4967D44C29913FC000592094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44A29913FC000592094 /* LaunchScreen.storyboard */; };
+		497D056B2997A53700915009 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 497D056A2997A53700915009 /* CocoaAsyncSocket */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4967D44829913FC000592094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4967D44B29913FC000592094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4967D44D29913FC000592094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlpacaClientDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497D056B2997A53700915009 /* CocoaAsyncSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 		4967D43E29913FBD00592094 /* AlpacaClient */ = {
 			isa = PBXGroup;
 			children = (
+				496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */,
 				4967D43F29913FBD00592094 /* AppDelegate.swift */,
 				4967D44129913FBD00592094 /* SceneDelegate.swift */,
 				4967D44329913FBD00592094 /* ViewController.swift */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = AlpacaClient;
+			packageProductDependencies = (
+				497D056A2997A53700915009 /* CocoaAsyncSocket */,
+			);
 			productName = AlpacaClient;
 			productReference = 4967D43C29913FBD00592094 /* AlpacaClient.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 4967D43329913FBD00592094;
+			packageReferences = (
+				497D05692997A53700915009 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
+			);
 			productRefGroup = 4967D43D29913FBD00592094 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -285,6 +295,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlpacaClient/AlpacaClientDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -292,11 +304,14 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UA87722P5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlpacaClient/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AlpacaClient;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AlpacaClient uses the local network to seek for ASCOM Alpaca devices and connect to them";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -326,11 +341,14 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = UA87722P5Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlpacaClient/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AlpacaClient;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AlpacaClient uses the local network to seek for ASCOM Alpaca devices and connect to them";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.serhiiherniak.AlpacaClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match distribution com.serhiiherniak.AlpacaClient";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match adhoc com.serhiiherniak.AlpacaClient";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -369,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		497D05692997A53700915009 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robbiehanson/CocoaAsyncSocket";
+			requirement = {
+				kind = exactVersion;
+				version = 7.6.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		497D056A2997A53700915009 /* CocoaAsyncSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 497D05692997A53700915009 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */;
+			productName = CocoaAsyncSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4967D43429913FBD00592094 /* Project object */;
 }
