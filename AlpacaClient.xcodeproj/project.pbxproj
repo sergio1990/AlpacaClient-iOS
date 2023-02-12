@@ -10,7 +10,6 @@
 		4967D44029913FBD00592094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D43F29913FBD00592094 /* AppDelegate.swift */; };
 		4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D44129913FBD00592094 /* SceneDelegate.swift */; };
 		4967D44429913FBD00592094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D44329913FBD00592094 /* ViewController.swift */; };
-		4967D44729913FBD00592094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44529913FBD00592094 /* Main.storyboard */; };
 		4967D44929913FC000592094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44829913FC000592094 /* Assets.xcassets */; };
 		4967D44C29913FC000592094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44A29913FC000592094 /* LaunchScreen.storyboard */; };
 		497D056B2997A53700915009 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 497D056A2997A53700915009 /* CocoaAsyncSocket */; };
@@ -21,7 +20,6 @@
 		4967D43F29913FBD00592094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4967D44129913FBD00592094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4967D44329913FBD00592094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4967D44629913FBD00592094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4967D44829913FC000592094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4967D44B29913FC000592094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4967D44D29913FC000592094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				4967D43F29913FBD00592094 /* AppDelegate.swift */,
 				4967D44129913FBD00592094 /* SceneDelegate.swift */,
 				4967D44329913FBD00592094 /* ViewController.swift */,
-				4967D44529913FBD00592094 /* Main.storyboard */,
 				4967D44829913FC000592094 /* Assets.xcassets */,
 				4967D44A29913FC000592094 /* LaunchScreen.storyboard */,
 				4967D44D29913FC000592094 /* Info.plist */,
@@ -137,7 +134,6 @@
 			files = (
 				4967D44C29913FC000592094 /* LaunchScreen.storyboard in Resources */,
 				4967D44929913FC000592094 /* Assets.xcassets in Resources */,
-				4967D44729913FBD00592094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,14 +153,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4967D44529913FBD00592094 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4967D44629913FBD00592094 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4967D44A29913FC000592094 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,7 +297,7 @@
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AlpacaClient uses the local network to seek for ASCOM Alpaca devices and connect to them";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -346,7 +334,7 @@
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AlpacaClient uses the local network to seek for ASCOM Alpaca devices and connect to them";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
