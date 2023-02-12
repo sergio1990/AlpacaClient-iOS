@@ -10,23 +10,65 @@ import Network
 import CocoaAsyncSocket
 
 class ViewController: UIViewController {
-    @IBOutlet weak var labelMessage: UILabel!
-    @IBOutlet weak var labelReceive: UILabel!
-    @IBOutlet weak var labelReady: UILabel!
+    private lazy var labelReady: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        return label
+    }()
+    private lazy var labelMessage: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        return label
+    }()
+    private lazy var labelReceive: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        return label
+    }()
+    private lazy var discoverButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.configuration = .filled()
+        button.setTitle("Discover", for: .normal)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        return button
+    }()
     
-    var udpSocket: GCDAsyncUdpSocket?
-    var tag: Int = 0
+    private var udpSocket: GCDAsyncUdpSocket?
+    private var tag: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setupView()
         
         prepareUDPSocket()
     }
     
-    @IBAction func buttonTapped(_ sender: Any) {
+    @objc private func buttonTapped(_ sender: Any) {
         let messageToUDP = "alpacadiscovery1"
         sendToUDPSocket(messageToUDP)
+    }
+    
+    private func setupView() {
+        view.addSubview(labelReady)
+        view.addSubview(labelMessage)
+        view.addSubview(labelReceive)
+        view.addSubview(discoverButton)
+        
+        NSLayoutConstraint.activate([
+            labelReady.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
+            labelReady.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            labelMessage.topAnchor.constraint(equalTo: labelReady.bottomAnchor, constant: 40),
+            labelMessage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            labelReceive.topAnchor.constraint(equalTo: labelMessage.bottomAnchor, constant: 40),
+            labelReceive.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            discoverButton.topAnchor.constraint(equalTo: labelReceive.bottomAnchor, constant: 40),
+            discoverButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
 
     private func prepareUDPSocket() {
@@ -36,19 +78,23 @@ class ViewController: UIViewController {
             print("Success bind to port!")
         } catch {
             print("Failed to bind to port!")
+            return
         }
         do {
             try udpSocket?.enableBroadcast(true)
             print("Success enabled broadcast!")
         } catch {
             print("Failed to enable broadcast!")
+            return
         }
         do {
             try udpSocket?.beginReceiving()
             print("Success begin receiving!")
         } catch {
             print("Failed to begin receiving!")
+            return
         }
+        labelReady.text = "Socket is ready!"
     }
     
     private func sendToUDPSocket(_ content: String) {
