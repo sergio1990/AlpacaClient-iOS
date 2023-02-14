@@ -6,25 +6,27 @@
 //
 
 import UIKit
-import Network
-import CocoaAsyncSocket
+import Combine
 
 class ViewController: UIViewController {
     private lazy var labelReady: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         label.numberOfLines = 1
         return label
     }()
     private lazy var labelMessage: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         label.numberOfLines = 1
         return label
     }()
     private lazy var labelReceive: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
         label.numberOfLines = 1
         return label
     }()
@@ -37,16 +39,16 @@ class ViewController: UIViewController {
         return button
     }()
     
-    private var udpSocket: GCDAsyncUdpSocket?
-    private var tag: Int = 0
+    private var discoveryService: DiscoveryService?
+    private var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         setupView()
-        
-        prepareUDPSocket()
+        prepareDiscoveryService()
+        setupSubscriptions()
     }
     
     @objc private func buttonTapped(_ sender: Any) {
@@ -55,6 +57,8 @@ class ViewController: UIViewController {
     }
     
     private func setupView() {
+        discoverButton.isEnabled = false
+        
         view.addSubview(labelReady)
         view.addSubview(labelMessage)
         view.addSubview(labelReceive)
@@ -72,73 +76,27 @@ class ViewController: UIViewController {
         ])
     }
 
-    private func prepareUDPSocket() {
-        udpSocket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .main)
+    private func prepareDiscoveryService() {
+        discoveryService = DiscoveryService()
         do {
-            try udpSocket?.bind(toPort: 0)
-            print("Success bind to port!")
+            try discoveryService?.connect()
+            discoverButton.isEnabled = true
+            labelReady.text = "Ready to discover!"
         } catch {
-            print("Failed to bind to port!")
-            return
+            labelReady.text = "Failed init the discovery service!"
         }
-        do {
-            try udpSocket?.enableBroadcast(true)
-            print("Success enabled broadcast!")
-        } catch {
-            print("Failed to enable broadcast!")
-            return
-        }
-        do {
-            try udpSocket?.beginReceiving()
-            print("Success begin receiving!")
-        } catch {
-            print("Failed to begin receiving!")
-            return
-        }
-        labelReady.text = "Socket is ready!"
+    }
+    
+    private func setupSubscriptions() {
+        discoveryService?.discoveryInfoPublisher
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak labelReceive] discoveryInfo in
+                labelReceive?.text = discoveryInfo.toString()
+            })
+            .store(in: &cancellables)
     }
     
     private func sendToUDPSocket(_ content: String) {
-        guard let contentToSendUDP = content.data(using: String.Encoding.utf8) else {
-            return
-        }
-        
-        print("Trying to send \(content)")
-        udpSocket?.send(contentToSendUDP, toHost: "192.168.1.255", port: 32227, withTimeout: -1, tag: tag)
-        tag += 1
-    }
-}
-
-extension ViewController: GCDAsyncUdpSocketDelegate {
-    func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
-        print("Did close due to \(error?.localizedDescription)")
-    }
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
-        print("Did connect!")
-    }
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didNotConnect error: Error?) {
-        print("Did not connect due to \(error?.localizedDescription)")
-    }
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didNotSendDataWithTag tag: Int, dueToError error: Error?) {
-        print("Did not send due to \(error?.localizedDescription)")
-    }
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
-        print("Did send data with tag \(tag)")
-        labelMessage.text = "Sent with the tag \(tag)"
-    }
-    
-    func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
-        let stringData = String(data: data, encoding: .utf8)
-        
-        let addrBytes = address[4...7]
-        let portBytes = address[2...3]
-        
-        let hostString = addrBytes
-            .map { String($0) }
-            .joined(separator: ".")
-        let port = UInt16(bigEndian: portBytes.withUnsafeBytes { $0.pointee })
-        
-        print("Received \(stringData) from \(hostString):\(port)")
-        labelReceive.text = stringData
+        discoveryService?.discover()
     }
 }

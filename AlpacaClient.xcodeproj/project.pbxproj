@@ -13,6 +13,7 @@
 		4967D44929913FC000592094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44829913FC000592094 /* Assets.xcassets */; };
 		4967D44C29913FC000592094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44A29913FC000592094 /* LaunchScreen.storyboard */; };
 		497D056B2997A53700915009 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 497D056A2997A53700915009 /* CocoaAsyncSocket */; };
+		497D056E299BF47600915009 /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497D056D299BF47600915009 /* DiscoveryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4967D44B29913FC000592094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4967D44D29913FC000592094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlpacaClientDebug.entitlements; sourceTree = "<group>"; };
+		497D056D299BF47600915009 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4967D43E29913FBD00592094 /* AlpacaClient */ = {
 			isa = PBXGroup;
 			children = (
+				497D056C299BF45A00915009 /* Discovery */,
 				496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */,
 				4967D43F29913FBD00592094 /* AppDelegate.swift */,
 				4967D44129913FBD00592094 /* SceneDelegate.swift */,
@@ -66,6 +69,14 @@
 				4967D44D29913FC000592094 /* Info.plist */,
 			);
 			path = AlpacaClient;
+			sourceTree = "<group>";
+		};
+		497D056C299BF45A00915009 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				497D056D299BF47600915009 /* DiscoveryService.swift */,
+			);
+			path = Discovery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			files = (
 				4967D44429913FBD00592094 /* ViewController.swift in Sources */,
 				4967D44029913FBD00592094 /* AppDelegate.swift in Sources */,
+				497D056E299BF47600915009 /* DiscoveryService.swift in Sources */,
 				4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
