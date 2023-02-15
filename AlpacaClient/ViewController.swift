@@ -52,8 +52,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func buttonTapped(_ sender: Any) {
-        let messageToUDP = "alpacadiscovery1"
-        sendToUDPSocket(messageToUDP)
+        discoveryService?.discover()
     }
     
     private func setupView() {
@@ -94,9 +93,5 @@ class ViewController: UIViewController {
                 labelReceive?.text = discoveryInfo.toString()
             })
             .store(in: &cancellables)
-    }
-    
-    private func sendToUDPSocket(_ content: String) {
-        discoveryService?.discover()
     }
 }
