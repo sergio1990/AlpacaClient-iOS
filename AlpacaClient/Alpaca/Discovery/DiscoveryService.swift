@@ -74,19 +74,19 @@ class DiscoveryService: NSObject {
 
 extension DiscoveryService: GCDAsyncUdpSocketDelegate {
     func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
-        print("UDPSocket: did close due to \(error?.localizedDescription ?? "unknown") error")
+        Log.severe("UDPSocket: did close due to \(error?.localizedDescription ?? "unknown") error")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didConnectToAddress address: Data) {
-        print("UDPSocket: did connect!")
+        Log.info("UDPSocket: did connect!")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didNotConnect error: Error?) {
-        print("UDPSocket: did not connect due to \(error?.localizedDescription ?? "unknown") error")
+        Log.severe("UDPSocket: did not connect due to \(error?.localizedDescription ?? "unknown") error")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didNotSendDataWithTag tag: Int, dueToError error: Error?) {
-        print("UDPSocket: did not send data with the tag \(tag) due to \(error?.localizedDescription ?? "unknown") error")
+        Log.error("UDPSocket: did not send data with the tag \(tag) due to \(error?.localizedDescription ?? "unknown") error")
     }
     func udpSocket(_ sock: GCDAsyncUdpSocket, didSendDataWithTag tag: Int) {
-        print("UDPSocket: did send data with tag \(tag)")
+        Log.info("UDPSocket: did send data with tag \(tag)")
     }
     
     func udpSocket(_ sock: GCDAsyncUdpSocket, didReceive data: Data, fromAddress address: Data, withFilterContext filterContext: Any?) {
@@ -105,7 +105,7 @@ extension DiscoveryService: GCDAsyncUdpSocketDelegate {
             .joined(separator: ".")
         let port = UInt16(bigEndian: portBytes.withUnsafeBytes { $0.pointee })
         
-        print("UDPSocket: Received \(stringData) from \(hostString):\(port)")
+        Log.info("UDPSocket: Received \(stringData) from \(hostString):\(port)")
         
         guard let payload = AlpacaDiscoveryPayload.decode(jsonData: data) else {
             return

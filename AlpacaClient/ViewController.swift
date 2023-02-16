@@ -96,7 +96,7 @@ class ViewController: UIViewController {
                 
                 Task {
                     let apiVersionsResponse = await managementService.apiVersions()
-                    print(apiVersionsResponse)
+                    Log.info(apiVersionsResponse)
                 }
             })
             .store(in: &cancellables)
