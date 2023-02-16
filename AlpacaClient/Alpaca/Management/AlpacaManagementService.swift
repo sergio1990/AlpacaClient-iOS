@@ -70,22 +70,35 @@ struct AlpacaManagementApiVersions {
     let versions: [UInt16]
 }
 
-private struct AlpacaManagementApiVersionsPayload: Decodable {
-    let value: [UInt16]
+private class AlpacaApiPayload: Decodable {
     let clientTransactionId: UInt32
     let serverTransactionId: UInt32
     
     private enum CodingKeys: String, CodingKey {
-        case Value
         case ClientTransactionID
         case ServerTransactionID
     }
     
-    init(from decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
+        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        
+        clientTransactionId = try rootContainer.decode(UInt32.self, forKey: .ClientTransactionID)
+        serverTransactionId = try rootContainer.decode(UInt32.self, forKey: .ServerTransactionID)
+    }
+}
+
+private class AlpacaManagementApiVersionsPayload: AlpacaApiPayload {
+    let value: [UInt16]
+    
+    private enum CodingKeys: String, CodingKey {
+        case Value
+    }
+    
+    required init(from decoder: Decoder) throws {
         let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
         
         value = try rootContainer.decode([UInt16].self, forKey: .Value)
-        clientTransactionId = try rootContainer.decode(UInt32.self, forKey: .ClientTransactionID)
-        serverTransactionId = try rootContainer.decode(UInt32.self, forKey: .ServerTransactionID)
+        
+        try super.init(from: decoder)
     }
 }
