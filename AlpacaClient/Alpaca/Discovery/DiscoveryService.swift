@@ -122,16 +122,6 @@ private struct AlpacaDiscoveryPayload: Decodable {
         case alpacaport
     }
     
-    static func decode(jsonData: Data) -> Self? {
-        let decoder = JSONDecoder()
-        do {
-            return try decoder.decode(Self.self, from: jsonData)
-        } catch {
-            print("AlpacaDiscoveryPayload.decode failed with the error: \(error)")
-            return nil
-        }
-    }
-    
     init(from decoder: Decoder) throws {
         let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
         
