@@ -95,8 +95,16 @@ class ViewController: UIViewController {
                 let managementService = AlpacaManagementService(host: discoveryInfo.host, port: discoveryInfo.port)
                 
                 Task {
-                    let apiVersionsResponse = await managementService.apiVersions()
-                    Log.info(apiVersionsResponse)
+                    do {
+                        let apiVersionsResponse = try await managementService.apiVersions()
+                        Log.info(apiVersionsResponse)
+                    } catch {
+                        if var serviceError = error as? AlpacaManagementService.Error {
+                            Log.error("Error when getting apiVersions!\n\(serviceError.toString())")
+                        } else {
+                            Log.error("Error when getting apiVersions!\n\(error.localizedDescription)")
+                        }
+                    }
                 }
             })
             .store(in: &cancellables)

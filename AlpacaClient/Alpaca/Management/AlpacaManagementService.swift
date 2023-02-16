@@ -8,6 +8,23 @@
 import Foundation
 
 class AlpacaManagementService {
+    struct Error: Swift.Error {
+        let message: String
+        let data: Data?
+        
+        lazy var dataString: String = {
+            guard let data = data else {
+                return "no data"
+            }
+            
+            return String(data: data, encoding: .utf8) ?? "no data"
+        }()
+        
+        mutating func toString() -> String {
+            "Error message:\(message)\nAdditional data:\(dataString)"
+        }
+    }
+    
     private let urlProvider: URLProvider
     
     var networkManager = NetworkManager.shared
@@ -16,22 +33,26 @@ class AlpacaManagementService {
         urlProvider = .init(host: host, port: port)
     }
     
-    func apiVersions() async -> String {
+    func apiVersions() async throws -> AlpacaManagementApiVersions {
         guard let url = urlProvider.apiVersions else {
-            return "invalid url"
+            throw Error(message: "Invalid URL!", data: nil)
         }
         
-        let (data, _) = await networkManager.get(url)
+        let (data, isSuccess) = await networkManager.get(url)
+        
+        guard isSuccess else {
+            throw Error(message: "Failed getting API versions from remote!", data: data)
+        }
         
         guard let data = data else {
-            return "no data"
+            throw Error(message: "Response data isn't available!", data: nil)
         }
         
-        guard let dataString = String(data: data, encoding: .utf8) else {
-            return "invalid data"
+        guard let payload = AlpacaManagementApiVersionsPayload.decode(jsonData: data) else {
+            throw Error(message: "Failed parsing the response data!", data: data)
         }
         
-        return dataString
+        return .init(versions: payload.value)
     }
 }
 
@@ -42,5 +63,29 @@ private struct URLProvider {
         let hostAndPort = "http://\(host):\(port)"
         
         apiVersions =  URL(string: "\(hostAndPort)/management/apiversions")
+    }
+}
+
+struct AlpacaManagementApiVersions {
+    let versions: [UInt16]
+}
+
+private struct AlpacaManagementApiVersionsPayload: Decodable {
+    let value: [UInt16]
+    let clientTransactionId: UInt32
+    let serverTransactionId: UInt32
+    
+    private enum CodingKeys: String, CodingKey {
+        case Value
+        case ClientTransactionID
+        case ServerTransactionID
+    }
+    
+    init(from decoder: Decoder) throws {
+        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        
+        value = try rootContainer.decode([UInt16].self, forKey: .Value)
+        clientTransactionId = try rootContainer.decode(UInt32.self, forKey: .ClientTransactionID)
+        serverTransactionId = try rootContainer.decode(UInt32.self, forKey: .ServerTransactionID)
     }
 }
