@@ -81,6 +81,35 @@ class AlpacaManagementService {
             location: payload.value.location
         )
     }
+    
+    func configuredDevices(version: UInt16) async throws -> [AlpacaManagementApiConfiguredDevice] {
+        guard let url = urlProvider.configuredDevices(version: version) else {
+            throw Error(message: "Invalid URL!", data: nil)
+        }
+        
+        let (data, isSuccess) = await networkManager.get(url)
+        
+        guard isSuccess else {
+            throw Error(message: "Failed getting description from remote!", data: data)
+        }
+        
+        guard let data = data else {
+            throw Error(message: "Response data isn't available!", data: nil)
+        }
+        
+        guard let payload = AlpacaManagementApiPayload<[AlpacaManagementApiConfiguredDeviceValuePayload]>.decode(jsonData: data) else {
+            throw Error(message: "Failed parsing the response data!", data: data)
+        }
+        
+        return payload.value.map { configuredDevice in
+                .init(
+                    deviceName: configuredDevice.deviceName,
+                    deviceType: configuredDevice.deviceType,
+                    deviceNumber: configuredDevice.deviceNumber,
+                    uniqueID: configuredDevice.uniqueID
+                )
+        }
+    }
 }
 
 private struct URLProvider {
@@ -97,6 +126,10 @@ private struct URLProvider {
     func description(version: UInt16) -> URL? {
         URL(string: "\(hostAndPort)/management/v\(version)/description")
     }
+    
+    func configuredDevices(version: UInt16) -> URL? {
+        URL(string: "\(hostAndPort)/management/v\(version)/configureddevices")
+    }
 }
 
 struct AlpacaManagementApiVersions {
@@ -108,6 +141,13 @@ struct AlpacaManagementApiDescription {
     let manufacturer: String
     let manufacturerVersion: String
     let location: String
+}
+
+struct AlpacaManagementApiConfiguredDevice {
+    let deviceName: String
+    let deviceType: String
+    let deviceNumber: UInt32
+    let uniqueID: String
 }
 
 private struct AlpacaManagementApiPayload<ValueType: Decodable>: Decodable {
@@ -150,5 +190,28 @@ private struct AlpacaManagementApiDescriptionValuePayload: Decodable {
         manufacturer = try rootContainer.decode(String.self, forKey: .Manufacturer)
         manufacturerVersion = try rootContainer.decode(String.self, forKey: .ManufacturerVersion)
         location = try rootContainer.decode(String.self, forKey: .Location)
+    }
+}
+
+private struct AlpacaManagementApiConfiguredDeviceValuePayload: Decodable {
+    let deviceName: String
+    let deviceType: String
+    let deviceNumber: UInt32
+    let uniqueID: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case DeviceName
+        case DeviceType
+        case DeviceNumber
+        case UniqueID
+    }
+    
+    init(from decoder: Decoder) throws {
+        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+        
+        deviceName = try rootContainer.decode(String.self, forKey: .DeviceName)
+        deviceType = try rootContainer.decode(String.self, forKey: .DeviceType)
+        deviceNumber = try rootContainer.decode(UInt32.self, forKey: .DeviceNumber)
+        uniqueID = try rootContainer.decode(String.self, forKey: .UniqueID)
     }
 }

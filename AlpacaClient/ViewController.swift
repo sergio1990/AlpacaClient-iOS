@@ -100,6 +100,8 @@ class ViewController: UIViewController {
                         Log.info(apiVersionsResponse)
                         let descriptionResponse = try await managementService.description(version: apiVersionsResponse.versions[0])
                         Log.info(descriptionResponse)
+                        let connfiguredDevicesResponse = try await managementService.configuredDevices(version: apiVersionsResponse.versions[0])
+                        Log.info(connfiguredDevicesResponse)
                     } catch {
                         if var serviceError = error as? AlpacaManagementService.Error {
                             Log.error("Error when getting apiVersions!\n\(serviceError.toString())")
