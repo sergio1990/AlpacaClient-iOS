@@ -98,6 +98,8 @@ class ViewController: UIViewController {
                     do {
                         let apiVersionsResponse = try await managementService.apiVersions()
                         Log.info(apiVersionsResponse)
+                        let descriptionResponse = try await managementService.description(version: apiVersionsResponse.versions[0])
+                        Log.info(descriptionResponse)
                     } catch {
                         if var serviceError = error as? AlpacaManagementService.Error {
                             Log.error("Error when getting apiVersions!\n\(serviceError.toString())")
