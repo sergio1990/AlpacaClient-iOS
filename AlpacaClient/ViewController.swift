@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         return button
     }()
     
-    private var discoveryService: DiscoveryService?
+    private var discoveryService: AlpacaDiscovery.Service?
     private var cancellables = Set<AnyCancellable>()
     
     override func viewDidLoad() {
@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     }
 
     private func prepareDiscoveryService() {
-        discoveryService = DiscoveryService()
+        discoveryService = .init()
         do {
             try discoveryService?.connect()
             discoverButton.isEnabled = true
@@ -92,7 +92,7 @@ class ViewController: UIViewController {
             .sink(receiveValue: { [weak labelReceive] discoveryInfo in
                 labelReceive?.text = discoveryInfo.toString()
                 
-                let managementService = AlpacaManagementService(host: discoveryInfo.host, port: discoveryInfo.port)
+                let managementService = AlpacaManagement.Service(host: discoveryInfo.host, port: discoveryInfo.port)
                 
                 Task {
                     do {
@@ -103,7 +103,7 @@ class ViewController: UIViewController {
                         let connfiguredDevicesResponse = try await managementService.configuredDevices(version: apiVersionsResponse.versions[0])
                         Log.info(connfiguredDevicesResponse)
                     } catch {
-                        if var serviceError = error as? AlpacaManagementService.Error {
+                        if var serviceError = error as? AlpacaManagement.Service.Error {
                             Log.error("Error when getting apiVersions!\n\(serviceError.toString())")
                         } else {
                             Log.error("Error when getting apiVersions!\n\(error.localizedDescription)")

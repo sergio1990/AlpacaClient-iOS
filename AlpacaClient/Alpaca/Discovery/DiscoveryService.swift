@@ -13,66 +13,59 @@ private let discoveryMessage = "alpacadiscovery1"
 private let discoveryHort = "255.255.255.255"
 private let discoveryPort: UInt16 = 32227
 
-struct AlpacaDiscoveryInfo {
-    let host: String
-    let port: UInt16
-    
-    func toString() -> String {
-        "\(host):\(port)"
+extension AlpacaDiscovery {
+    class Service: NSObject {
+        struct ConnectError: Error {}
+        
+        private let discoveryData: Data?
+        private var udpSocket: GCDAsyncUdpSocket?
+        private var tag: Int = 0
+        private var isConnected = false
+        
+        private let discoveryInfoSubject = PassthroughSubject<Info, Never>()
+        
+        override init() {
+            discoveryData = discoveryMessage.data(using: .utf8)
+            
+            super.init()
+        }
+        
+        var discoveryInfoPublisher: AnyPublisher<Info, Never> {
+            discoveryInfoSubject.eraseToAnyPublisher()
+        }
+        
+        func connect() throws {
+            guard !isConnected else {
+                return
+            }
+            
+            udpSocket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .main)
+            do {
+                try udpSocket?.bind(toPort: 0)
+                try udpSocket?.enableBroadcast(true)
+                try udpSocket?.beginReceiving()
+            } catch {
+                throw ConnectError()
+            }
+            isConnected = true
+        }
+        
+        func discover() {
+            guard
+                isConnected,
+                let udpSocket = udpSocket,
+                let discoveryData = discoveryData
+            else {
+                return
+            }
+            
+            udpSocket.send(discoveryData, toHost: discoveryHort, port: discoveryPort, withTimeout: -1, tag: tag)
+            tag += 1
+        }
     }
 }
-
-class DiscoveryService: NSObject {
-    struct ConnectError: Error {}
     
-    private let discoveryData: Data?
-    private var udpSocket: GCDAsyncUdpSocket?
-    private var tag: Int = 0
-    private var isConnected = false
-
-    private let discoveryInfoSubject = PassthroughSubject<AlpacaDiscoveryInfo, Never>()
-    
-    override init() {
-        discoveryData = discoveryMessage.data(using: .utf8)
-        
-        super.init()
-    }
-    
-    var discoveryInfoPublisher: AnyPublisher<AlpacaDiscoveryInfo, Never> {
-        discoveryInfoSubject.eraseToAnyPublisher()
-    }
-    
-    func connect() throws {
-        guard !isConnected else {
-            return
-        }
-        
-        udpSocket = GCDAsyncUdpSocket(delegate: self, delegateQueue: .main)
-        do {
-            try udpSocket?.bind(toPort: 0)
-            try udpSocket?.enableBroadcast(true)
-            try udpSocket?.beginReceiving()
-        } catch {
-            throw ConnectError()
-        }
-        isConnected = true
-    }
-    
-    func discover() {
-        guard
-            isConnected,
-            let udpSocket = udpSocket,
-            let discoveryData = discoveryData
-        else {
-            return
-        }
-        
-        udpSocket.send(discoveryData, toHost: discoveryHort, port: discoveryPort, withTimeout: -1, tag: tag)
-        tag += 1
-    }
-}
-
-extension DiscoveryService: GCDAsyncUdpSocketDelegate {
+extension AlpacaDiscovery.Service: GCDAsyncUdpSocketDelegate {
     func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
         Log.severe("UDPSocket: did close due to \(error?.localizedDescription ?? "unknown") error")
     }
@@ -107,7 +100,7 @@ extension DiscoveryService: GCDAsyncUdpSocketDelegate {
         
         Log.info("UDPSocket: Received \(stringData) from \(hostString):\(port)")
         
-        guard let payload = AlpacaDiscoveryPayload.decode(jsonData: data) else {
+        guard let payload = AlpacaDiscovery.Payload.decode(jsonData: data) else {
             return
         }
         
@@ -115,16 +108,18 @@ extension DiscoveryService: GCDAsyncUdpSocketDelegate {
     }
 }
 
-private struct AlpacaDiscoveryPayload: Decodable {
-    let alpacaPort: UInt16
-    
-    private enum CodingKeys: String, CodingKey {
-        case alpacaport
-    }
-    
-    init(from decoder: Decoder) throws {
-        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+private extension AlpacaDiscovery {
+    struct Payload: Decodable {
+        let alpacaPort: UInt16
         
-        alpacaPort = try rootContainer.decode(UInt16.self, forKey: .alpacaport)
+        private enum CodingKeys: String, CodingKey {
+            case alpacaport
+        }
+        
+        init(from decoder: Decoder) throws {
+            let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
+            
+            alpacaPort = try rootContainer.decode(UInt16.self, forKey: .alpacaport)
+        }
     }
 }

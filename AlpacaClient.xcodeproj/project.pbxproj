@@ -10,9 +10,11 @@
 		4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBB299E553D006EEDCF /* HTTPDownloader.swift */; };
 		4963FDBE299E566D006EEDCF /* HTTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBD299E566D006EEDCF /* HTTPOperation.swift */; };
 		4963FDC0299E5F0C006EEDCF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBF299E5F0C006EEDCF /* NetworkManager.swift */; };
-		4963FDC4299E614F006EEDCF /* AlpacaManagementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDC3299E614F006EEDCF /* AlpacaManagementService.swift */; };
+		4963FDC4299E614F006EEDCF /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDC3299E614F006EEDCF /* Service.swift */; };
 		4963FDC7299E6884006EEDCF /* Decodable + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDC6299E6884006EEDCF /* Decodable + Extension.swift */; };
 		4963FDCA299E6931006EEDCF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDC9299E6931006EEDCF /* Log.swift */; };
+		4963FDCC299E989C006EEDCF /* AlpacaManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDCB299E989C006EEDCF /* AlpacaManagement.swift */; };
+		4963FDCE299E9DBE006EEDCF /* AlpacaDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDCD299E9DBE006EEDCF /* AlpacaDiscovery.swift */; };
 		4967D44029913FBD00592094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D43F29913FBD00592094 /* AppDelegate.swift */; };
 		4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D44129913FBD00592094 /* SceneDelegate.swift */; };
 		4967D44429913FBD00592094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4967D44329913FBD00592094 /* ViewController.swift */; };
@@ -26,9 +28,11 @@
 		4963FDBB299E553D006EEDCF /* HTTPDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDownloader.swift; sourceTree = "<group>"; };
 		4963FDBD299E566D006EEDCF /* HTTPOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPOperation.swift; sourceTree = "<group>"; };
 		4963FDBF299E5F0C006EEDCF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		4963FDC3299E614F006EEDCF /* AlpacaManagementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaManagementService.swift; sourceTree = "<group>"; };
+		4963FDC3299E614F006EEDCF /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4963FDC6299E6884006EEDCF /* Decodable + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable + Extension.swift"; sourceTree = "<group>"; };
 		4963FDC9299E6931006EEDCF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4963FDCB299E989C006EEDCF /* AlpacaManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaManagement.swift; sourceTree = "<group>"; };
+		4963FDCD299E9DBE006EEDCF /* AlpacaDiscovery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaDiscovery.swift; sourceTree = "<group>"; };
 		4967D43C29913FBD00592094 /* AlpacaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlpacaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4967D43F29913FBD00592094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4967D44129913FBD00592094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		4963FDC1299E6108006EEDCF /* Management */ = {
 			isa = PBXGroup;
 			children = (
-				4963FDC3299E614F006EEDCF /* AlpacaManagementService.swift */,
+				4963FDC3299E614F006EEDCF /* Service.swift */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -75,6 +79,8 @@
 			children = (
 				497D056C299BF45A00915009 /* Discovery */,
 				4963FDC1299E6108006EEDCF /* Management */,
+				4963FDCB299E989C006EEDCF /* AlpacaManagement.swift */,
+				4963FDCD299E9DBE006EEDCF /* AlpacaDiscovery.swift */,
 			);
 			path = Alpaca;
 			sourceTree = "<group>";
@@ -213,11 +219,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4963FDC4299E614F006EEDCF /* AlpacaManagementService.swift in Sources */,
+				4963FDC4299E614F006EEDCF /* Service.swift in Sources */,
 				4967D44429913FBD00592094 /* ViewController.swift in Sources */,
 				4963FDCA299E6931006EEDCF /* Log.swift in Sources */,
+				4963FDCC299E989C006EEDCF /* AlpacaManagement.swift in Sources */,
 				4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */,
 				4967D44029913FBD00592094 /* AppDelegate.swift in Sources */,
+				4963FDCE299E9DBE006EEDCF /* AlpacaDiscovery.swift in Sources */,
 				4963FDC0299E5F0C006EEDCF /* NetworkManager.swift in Sources */,
 				4963FDC7299E6884006EEDCF /* Decodable + Extension.swift in Sources */,
 				497D056E299BF47600915009 /* DiscoveryService.swift in Sources */,
