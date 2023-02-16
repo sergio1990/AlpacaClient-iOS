@@ -91,6 +91,13 @@ class ViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak labelReceive] discoveryInfo in
                 labelReceive?.text = discoveryInfo.toString()
+                
+                let managementService = AlpacaManagementService(host: discoveryInfo.host, port: discoveryInfo.port)
+                
+                Task {
+                    let apiVersionsResponse = await managementService.apiVersions()
+                    print(apiVersionsResponse)
+                }
             })
             .store(in: &cancellables)
     }
