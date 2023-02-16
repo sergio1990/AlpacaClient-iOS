@@ -48,7 +48,7 @@ class AlpacaManagementService {
             throw Error(message: "Response data isn't available!", data: nil)
         }
         
-        guard let payload = AlpacaManagementApiVersionsPayload.decode(jsonData: data) else {
+        guard let payload = AlpacaManagementApiPayload<[UInt16]>.decode(jsonData: data) else {
             throw Error(message: "Failed parsing the response data!", data: data)
         }
         
@@ -70,35 +70,22 @@ struct AlpacaManagementApiVersions {
     let versions: [UInt16]
 }
 
-private class AlpacaApiPayload: Decodable {
+private struct AlpacaManagementApiPayload<ValueType: Decodable>: Decodable {
+    let value: ValueType
     let clientTransactionId: UInt32
     let serverTransactionId: UInt32
     
     private enum CodingKeys: String, CodingKey {
+        case Value
         case ClientTransactionID
         case ServerTransactionID
     }
     
-    required init(from decoder: Decoder) throws {
+    init(from decoder: Decoder) throws {
         let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
         
+        value = try rootContainer.decode(ValueType.self, forKey: .Value)
         clientTransactionId = try rootContainer.decode(UInt32.self, forKey: .ClientTransactionID)
         serverTransactionId = try rootContainer.decode(UInt32.self, forKey: .ServerTransactionID)
-    }
-}
-
-private class AlpacaManagementApiVersionsPayload: AlpacaApiPayload {
-    let value: [UInt16]
-    
-    private enum CodingKeys: String, CodingKey {
-        case Value
-    }
-    
-    required init(from decoder: Decoder) throws {
-        let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
-        
-        value = try rootContainer.decode([UInt16].self, forKey: .Value)
-        
-        try super.init(from: decoder)
     }
 }
