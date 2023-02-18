@@ -20,8 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        
+        let rootViewController = UINavigationController()
+        
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
+        
+        let discoveryCoordinator = DiscoveryCoordinator(navigationController: rootViewController)
+        discoveryCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

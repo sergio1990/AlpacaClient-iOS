@@ -22,6 +22,10 @@
 		4967D44C29913FC000592094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967D44A29913FC000592094 /* LaunchScreen.storyboard */; };
 		497D056B2997A53700915009 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 497D056A2997A53700915009 /* CocoaAsyncSocket */; };
 		497D056E299BF47600915009 /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497D056D299BF47600915009 /* DiscoveryService.swift */; };
+		49BB6E3929A136C2006BE54D /* DiscoveryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */; };
+		49BB6E3B29A136D2006BE54D /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */; };
+		49BB6E3D29A136E4006BE54D /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */; };
+		49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		4967D44D29913FC000592094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlpacaClientDebug.entitlements; sourceTree = "<group>"; };
 		497D056D299BF47600915009 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
+		49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCoordinator.swift; sourceTree = "<group>"; };
+		49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
+		49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				4963FDC6299E6884006EEDCF /* Decodable + Extension.swift */,
+				49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 		4967D43E29913FBD00592094 /* AlpacaClient */ = {
 			isa = PBXGroup;
 			children = (
+				49BB6E3629A1368A006BE54D /* UI */,
 				4963FDC8299E6923006EEDCF /* Utilities */,
 				4963FDC5299E686F006EEDCF /* Extensions */,
 				4963FDC2299E6121006EEDCF /* Alpaca */,
@@ -139,6 +149,24 @@
 			isa = PBXGroup;
 			children = (
 				497D056D299BF47600915009 /* DiscoveryService.swift */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		49BB6E3629A1368A006BE54D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				49BB6E3729A13697006BE54D /* Discovery */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		49BB6E3729A13697006BE54D /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */,
+				49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */,
+				49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -222,13 +250,17 @@
 				4963FDC4299E614F006EEDCF /* Service.swift in Sources */,
 				4967D44429913FBD00592094 /* ViewController.swift in Sources */,
 				4963FDCA299E6931006EEDCF /* Log.swift in Sources */,
+				49BB6E3B29A136D2006BE54D /* DiscoveryViewController.swift in Sources */,
 				4963FDCC299E989C006EEDCF /* AlpacaManagement.swift in Sources */,
 				4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */,
 				4967D44029913FBD00592094 /* AppDelegate.swift in Sources */,
 				4963FDCE299E9DBE006EEDCF /* AlpacaDiscovery.swift in Sources */,
 				4963FDC0299E5F0C006EEDCF /* NetworkManager.swift in Sources */,
 				4963FDC7299E6884006EEDCF /* Decodable + Extension.swift in Sources */,
+				49BB6E3D29A136E4006BE54D /* DiscoveryViewModel.swift in Sources */,
 				497D056E299BF47600915009 /* DiscoveryService.swift in Sources */,
+				49BB6E3929A136C2006BE54D /* DiscoveryCoordinator.swift in Sources */,
+				49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */,
 				4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */,
 				4963FDBE299E566D006EEDCF /* HTTPOperation.swift in Sources */,
 			);
