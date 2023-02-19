@@ -10,6 +10,8 @@ import UIKit
 
 class DiscoveryViewController: BaseViewController {
     var viewModel: DiscoveryViewModel!
+    
+    private var isRefreshAnimating: Bool = false
 
     private lazy var messageLabel: UILabel = {
         let label = UILabel()
@@ -46,7 +48,14 @@ class DiscoveryViewController: BaseViewController {
         
         navigationItem.title = "Alpaca Discovery"
         
-        let rightItem = UIBarButtonItem(image: UIImage(named: "Icons/refresh")?.resize(withSize: .init(width: 20, height: 20)), style: .plain, target: self, action: #selector(updateDidTap))
+        let refreshIcon = UIImage(named: "Icons/refresh")?.resize(withSize: .init(width: 20, height: 20))
+        let iconSize = CGRect(origin: .zero, size: refreshIcon!.size)
+        let iconButton = UIButton(frame: iconSize)
+        iconButton.addTarget(self, action: #selector(updateDidTap), for: .touchUpInside)
+        
+        iconButton.setBackgroundImage(refreshIcon, for: [])
+        
+        let rightItem = UIBarButtonItem(customView: iconButton)
         rightItem.tintColor = .black
         
         navigationItem.setHidesBackButton(true, animated: false)
@@ -54,6 +63,11 @@ class DiscoveryViewController: BaseViewController {
     }
     
     @objc private func updateDidTap() {
-        
+        if isRefreshAnimating {
+            navigationItem.rightBarButtonItem?.customView?.stopRotate360Degrees()
+        } else {
+            navigationItem.rightBarButtonItem?.customView?.rotate360Degrees()
+        }
+        isRefreshAnimating = !isRefreshAnimating
     }
 }

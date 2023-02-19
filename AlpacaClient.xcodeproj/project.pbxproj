@@ -27,6 +27,7 @@
 		49BB6E3D29A136E4006BE54D /* DiscoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */; };
 		49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */; };
 		49BB6E4129A1474A006BE54D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4029A1474A006BE54D /* BaseViewController.swift */; };
+		49BB6E4329A26897006BE54D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4229A26897006BE54D /* UIView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewModel.swift; sourceTree = "<group>"; };
 		49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		49BB6E4029A1474A006BE54D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		49BB6E4229A26897006BE54D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				4963FDC6299E6884006EEDCF /* Decodable + Extension.swift */,
 				49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */,
+				49BB6E4229A26897006BE54D /* UIView + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */,
 				4967D44029913FBD00592094 /* AppDelegate.swift in Sources */,
 				4963FDCE299E9DBE006EEDCF /* AlpacaDiscovery.swift in Sources */,
+				49BB6E4329A26897006BE54D /* UIView + Extension.swift in Sources */,
 				4963FDC0299E5F0C006EEDCF /* NetworkManager.swift in Sources */,
 				49BB6E4129A1474A006BE54D /* BaseViewController.swift in Sources */,
 				4963FDC7299E6884006EEDCF /* Decodable + Extension.swift in Sources */,
