@@ -7,11 +7,14 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class DiscoveryViewController: BaseViewController {
-    var viewModel: DiscoveryViewModel!
+    var vmCreateHandler: DiscoveryViewModel.CreateHandler!
+    private var viewModel: DiscoveryViewModel!
     
-    private var isRefreshAnimating: Bool = false
+    private let refreshDidTapSubject = PassthroughSubject<Void, Never>()
+    private var cancellables = Set<AnyCancellable>()
 
     private lazy var messageLabel: UILabel = {
         let label = UILabel()
@@ -31,6 +34,7 @@ class DiscoveryViewController: BaseViewController {
         
         setupView()
         setupNavigationBar()
+        setupViewModel()
     }
     
     private func setupView() {
@@ -62,12 +66,46 @@ class DiscoveryViewController: BaseViewController {
         navigationItem.setRightBarButton(rightItem, animated: false)
     }
     
-    @objc private func updateDidTap() {
-        if isRefreshAnimating {
-            navigationItem.rightBarButtonItem?.customView?.stopRotate360Degrees()
-        } else {
+    private func setupViewModel() {
+        viewModel = vmCreateHandler(refreshDidTapSubject.eraseToAnyPublisher())
+        
+        setupVMSubscriptions()
+    }
+    
+    private func setupVMSubscriptions() {
+        viewModel.statePublisher
+            .subscribe(on: DispatchQueue.global())
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.update(with: state)
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func update(with newState: DiscoveryViewModel.State) {
+        // Update refresh button animation
+        if newState.isDiscovering {
+            navigationItem.rightBarButtonItem?.customView?.isUserInteractionEnabled = false
             navigationItem.rightBarButtonItem?.customView?.rotate360Degrees()
+        } else {
+            navigationItem.rightBarButtonItem?.customView?.isUserInteractionEnabled = true
+            navigationItem.rightBarButtonItem?.customView?.stopRotate360Degrees()
         }
-        isRefreshAnimating = !isRefreshAnimating
+        
+        // Update message
+        messageLabel.fadeTransition(0.3)
+        if newState.isDiscovering {
+            messageLabel.text = "Discovering 🔎...\n\n\nThe screen will be updated once something is found"
+        } else {
+            if newState.didTryDiscovery && newState.discoveredDevices.isEmpty {
+                messageLabel.text = "Unfortunately, nothing has been found 🤷‍♂️"
+            } else {
+                messageLabel.text = "Please, trigger refresh in order to begin discovering Alpaca devices"
+            }
+        }
+    }
+    
+    @objc private func updateDidTap() {
+        refreshDidTapSubject.send()
     }
 }

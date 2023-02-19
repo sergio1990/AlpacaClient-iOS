@@ -17,7 +17,12 @@ class DiscoveryCoordinator {
     
     func start() {
         let viewController = DiscoveryViewController()
-        viewController.viewModel = .init()
+        
+        viewController.vmCreateHandler = { input in
+            let vmInput = DiscoveryViewModel.Input(refresh: input)
+            
+            return .init(input: vmInput)
+        }
         
         navigationController.pushViewController(viewController, animated: false)
     }

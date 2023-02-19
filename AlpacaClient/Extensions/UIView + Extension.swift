@@ -26,4 +26,25 @@ extension UIView {
     func stopRotate360Degrees() {
         layer.removeAnimation(forKey: rotate360DegreesAnimationKey)
     }
+    
+    /**
+     Calling it before changing some content, for instance, changing the text of the label the change will be done with the fade in/fade out animation
+
+     - Parameters:
+        - duration: the duration of the animation
+
+     - Example:
+
+             someLabel.text = 'original text'
+             someLabel.fadeTransition(0.3)
+             someLabel.text = 'changed'
+     */
+    func fadeTransition(_ duration: CFTimeInterval) {
+        let animation = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            CAMediaTimingFunctionName.easeInEaseOut)
+        animation.type = CATransitionType.fade
+        animation.duration = duration
+        layer.add(animation, forKey: CATransitionType.fade.rawValue)
+    }
 }
