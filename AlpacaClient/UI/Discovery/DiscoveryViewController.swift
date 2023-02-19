@@ -23,6 +23,7 @@ class DiscoveryViewController: BaseViewController {
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
         label.text = "Please, trigger refresh in order to begin discovering Alpaca devices"
+        label.textColor = .black
         
         return label
     }()
@@ -93,15 +94,19 @@ class DiscoveryViewController: BaseViewController {
         }
         
         // Update message
-        messageLabel.fadeTransition(0.3)
-        if newState.isDiscovering {
-            messageLabel.text = "Discovering 🔎...\n\n\nThe screen will be updated once something is found"
-        } else {
-            if newState.didTryDiscovery && newState.discoveredDevices.isEmpty {
-                messageLabel.text = "Unfortunately, nothing has been found 🤷‍♂️"
+        if newState.discoveredDevices.isEmpty {
+            messageLabel.fadeTransition(0.3)
+            if newState.isDiscovering {
+                messageLabel.text = "Discovering 🔎...\n\n\nThe screen will be updated once something is found"
             } else {
-                messageLabel.text = "Please, trigger refresh in order to begin discovering Alpaca devices"
+                if newState.didTryDiscovery {
+                    messageLabel.text = "Unfortunately, nothing has been found 🤷‍♂️"
+                } else {
+                    messageLabel.text = "Please, trigger refresh in order to begin discovering Alpaca devices"
+                }
             }
+        } else {
+            messageLabel.text = "Discovered: \(newState.discoveredDevices)"
         }
     }
     

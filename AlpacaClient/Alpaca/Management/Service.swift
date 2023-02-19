@@ -26,11 +26,15 @@ extension AlpacaManagement {
             }
         }
         
-        private let urlProvider: URLProvider
+        private var urlProvider: URLProvider
         
         var networkManager = NetworkManager.shared
         
-        init(host: String, port: UInt16) {
+        init() {
+            urlProvider = .init(host: "", port: 0)
+        }
+        
+        func configure(with host: String, port: UInt16) {
             urlProvider = .init(host: host, port: port)
         }
         

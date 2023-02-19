@@ -17,17 +17,46 @@ class DiscoveryViewModel {
         let refresh: VoidPublisher
     }
     
+    struct ServiceContext {
+        let discoveryService: AlpacaDiscovery.Service
+        let managementService: AlpacaManagement.Service
+    }
+    
     var statePublisher: AnyPublisher<State, Never>
     
-    init(input: Input) {
+    init(input: Input, serviceContext: ServiceContext) {
         let sharedRefreshInput = input.refresh.share()
         
-        let stateChangePublisher = sharedRefreshInput.map { StateChangeReason.refreshDidTrigger }
+        let refreshDidTriggerPublisher = sharedRefreshInput
+            .map { [serviceContext] in
+                do {
+                    try serviceContext.discoveryService.connect()
+                    serviceContext.discoveryService.discover()
+                } catch {
+                    Log.error("Error while discovering: \(error)")
+                }
+                
+                return StateChangeReason.refreshDidTrigger
+            }
         let refreshTimeoutPublisher = sharedRefreshInput
             .map { StateChangeReason.refreshDidTimeout }
             .delay(for: .seconds(10), scheduler: RunLoop.main, options: .none)
         
-        statePublisher = stateChangePublisher.merge(with: refreshTimeoutPublisher)
+        let deviceDiscoveredPublisher = serviceContext.discoveryService.discoveryInfoPublisher
+            .map { info -> StateChangeReason in
+                let discoveredDevice = DiscoveryViewModel.DiscoveredDevice(
+                    host: info.host,
+                    port: info.port,
+                    name: "",
+                    creator: "",
+                    version: "",
+                    apiVersion: 1
+                )
+                
+                return .deviceDidDiscover(device: discoveredDevice)
+            }
+        
+        statePublisher = refreshDidTriggerPublisher.merge(with: refreshTimeoutPublisher, deviceDiscoveredPublisher)
             .scan(State.default) { previousState, changeReason -> State in
                 previousState.change(with: changeReason)
             }
@@ -55,13 +84,22 @@ extension DiscoveryViewModel {
                 return .init(
                     isDiscovering: true,
                     didTryDiscovery: didTryDiscovery,
-                    discoveredDevices: discoveredDevices
+                    discoveredDevices: []
                 )
             case .refreshDidTimeout:
                 return .init(
                     isDiscovering: false,
                     didTryDiscovery: true,
                     discoveredDevices: discoveredDevices
+                )
+            case let .deviceDidDiscover(device):
+                var newDiscoveredDevices = discoveredDevices
+                newDiscoveredDevices.append(device)
+                
+                return .init(
+                    isDiscovering: isDiscovering,
+                    didTryDiscovery: didTryDiscovery,
+                    discoveredDevices: newDiscoveredDevices
                 )
             }
         }
@@ -70,6 +108,7 @@ extension DiscoveryViewModel {
     enum StateChangeReason {
         case refreshDidTrigger
         case refreshDidTimeout
+        case deviceDidDiscover(device: DiscoveredDevice)
     }
     
     struct DiscoveredDevice {

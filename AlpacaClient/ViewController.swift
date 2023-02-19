@@ -92,7 +92,8 @@ class ViewController: UIViewController {
             .sink(receiveValue: { [weak labelReceive] discoveryInfo in
                 labelReceive?.text = discoveryInfo.toString()
                 
-                let managementService = AlpacaManagement.Service(host: discoveryInfo.host, port: discoveryInfo.port)
+                let managementService = AlpacaManagement.Service()
+                managementService.configure(with: discoveryInfo.host, port: discoveryInfo.port)
                 
                 Task {
                     do {

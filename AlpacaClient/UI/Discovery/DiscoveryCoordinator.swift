@@ -20,8 +20,15 @@ class DiscoveryCoordinator {
         
         viewController.vmCreateHandler = { input in
             let vmInput = DiscoveryViewModel.Input(refresh: input)
+            let serviceContext: DiscoveryViewModel.ServiceContext = .init(
+                discoveryService: .init(),
+                managementService: .init()
+            )
             
-            return .init(input: vmInput)
+            return .init(
+                input: vmInput,
+                serviceContext: serviceContext
+            )
         }
         
         navigationController.pushViewController(viewController, animated: false)
