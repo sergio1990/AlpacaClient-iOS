@@ -95,7 +95,7 @@ extension AlpacaManagement {
             let (data, isSuccess) = await networkManager.get(url)
             
             guard isSuccess else {
-                throw Error(message: "Failed getting description from remote!", data: data)
+                throw Error(message: "Failed getting configured devices from remote!", data: data)
             }
             
             guard let data = data else {

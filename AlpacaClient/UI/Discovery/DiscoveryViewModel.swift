@@ -43,18 +43,36 @@ class DiscoveryViewModel {
             .delay(for: .seconds(10), scheduler: RunLoop.main, options: .none)
         
         let deviceDiscoveredPublisher = serviceContext.discoveryService.discoveryInfoPublisher
-            .map { info -> StateChangeReason in
-                let discoveredDevice = DiscoveryViewModel.DiscoveredDevice(
-                    host: info.host,
-                    port: info.port,
-                    name: "",
-                    creator: "",
-                    version: "",
-                    apiVersion: 1
-                )
-                
-                return .deviceDidDiscover(device: discoveredDevice)
-            }
+            .flatMap({ [serviceContext] discoveryInfo in
+                Future<StateChangeReason, Never> { promise in
+                    serviceContext.managementService.configure(with: discoveryInfo.host, port: discoveryInfo.port)
+                    
+                    Task {
+                        do {
+                            let apiVersionsResponse = try await serviceContext.managementService.apiVersions()
+                            Log.info(apiVersionsResponse)
+                            let descriptionResponse = try await serviceContext.managementService.description(version: apiVersionsResponse.versions[0])
+                            Log.info(descriptionResponse)
+                            
+                            let discoveredDevice: DiscoveredDevice = .init(
+                                host: discoveryInfo.host,
+                                port: discoveryInfo.port,
+                                name: descriptionResponse.serverName,
+                                creator: descriptionResponse.manufacturer,
+                                version: descriptionResponse.manufacturerVersion,
+                                apiVersion: apiVersionsResponse.versions[0]
+                            )
+                            promise(.success(StateChangeReason.deviceDidDiscover(device: discoveredDevice)))
+                        } catch {
+                            if var serviceError = error as? AlpacaManagement.Service.Error {
+                                Log.error("Error when requesting management API!\n\(serviceError.toString())")
+                            } else {
+                                Log.error("Error when requesting management API!\n\(error.localizedDescription)")
+                            }
+                        }
+                    }
+                }
+            })
         
         statePublisher = refreshDidTriggerPublisher.merge(with: refreshTimeoutPublisher, deviceDiscoveredPublisher)
             .scan(State.default) { previousState, changeReason -> State in
