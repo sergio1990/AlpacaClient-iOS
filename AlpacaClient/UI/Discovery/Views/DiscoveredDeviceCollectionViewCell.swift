@@ -35,6 +35,14 @@ class DiscoveredDeviceCollectionViewCell: UICollectionViewCell {
         
         return label
     }()
+    private lazy var rightImageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.image = UIImage(named: "Icons/angle-right")?.resize(withSize: .init(width: 20, height: 20))
+        view.contentMode = .scaleAspectFit
+        
+        return view
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -71,14 +79,18 @@ class DiscoveredDeviceCollectionViewCell: UICollectionViewCell {
     
     private func setupView() {
         contentView.addSubview(contentStackView)
+        contentView.addSubview(rightImageView)
         
         contentStackView.addArrangedSubview(nameLabel)
         contentStackView.addArrangedSubview(descriptionLabel)
         
         NSLayoutConstraint.activate([
+            rightImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            rightImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            rightImageView.widthAnchor.constraint(equalToConstant: 20),
             contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             contentStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
-            contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            contentStackView.trailingAnchor.constraint(equalTo: rightImageView.leadingAnchor, constant: -5),
             contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
     }
