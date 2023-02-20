@@ -79,6 +79,7 @@ class DiscoveryViewController: BaseViewController {
     
     private func setupNavigationBar() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.setBottomBorderColor(color: .lightGray.withAlphaComponent(0.5), height: 1)
         
         navigationItem.title = "Alpaca Discovery"
         
