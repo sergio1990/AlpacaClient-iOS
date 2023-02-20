@@ -136,5 +136,16 @@ extension DiscoveryViewModel {
         let creator: String
         let version: String
         let apiVersion: UInt16
+        
+        var uniqueID: String {
+            [
+                host,
+                String(port),
+                name,
+                creator,
+                version,
+                String(apiVersion)
+            ].joined(separator: "_")
+        }
     }
 }

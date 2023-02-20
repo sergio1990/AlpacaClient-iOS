@@ -27,6 +27,8 @@
 		49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */; };
 		49BB6E4129A1474A006BE54D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4029A1474A006BE54D /* BaseViewController.swift */; };
 		49BB6E4329A26897006BE54D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4229A26897006BE54D /* UIView + Extension.swift */; };
+		49BB6E4629A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */; };
+		49BB6E4829A370CA006BE54D /* UICollectionViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4729A370CA006BE54D /* UICollectionViewCell + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		49BB6E4029A1474A006BE54D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		49BB6E4229A26897006BE54D /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
+		49BB6E4729A370CA006BE54D /* UICollectionViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				4963FDC6299E6884006EEDCF /* Decodable + Extension.swift */,
 				49BB6E3E29A143C4006BE54D /* UIImage + Extension.swift */,
 				49BB6E4229A26897006BE54D /* UIView + Extension.swift */,
+				49BB6E4729A370CA006BE54D /* UICollectionViewCell + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,11 +172,20 @@
 		49BB6E3729A13697006BE54D /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				49BB6E4429A36D25006BE54D /* Views */,
 				49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */,
 				49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */,
 				49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */,
 			);
 			path = Discovery;
+			sourceTree = "<group>";
+		};
+		49BB6E4429A36D25006BE54D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BB6E4629A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift in Sources */,
 				4963FDC4299E614F006EEDCF /* Service.swift in Sources */,
 				4963FDCA299E6931006EEDCF /* Log.swift in Sources */,
 				49BB6E3B29A136D2006BE54D /* DiscoveryViewController.swift in Sources */,
@@ -267,6 +282,7 @@
 				49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */,
 				4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */,
 				4963FDBE299E566D006EEDCF /* HTTPOperation.swift in Sources */,
+				49BB6E4829A370CA006BE54D /* UICollectionViewCell + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

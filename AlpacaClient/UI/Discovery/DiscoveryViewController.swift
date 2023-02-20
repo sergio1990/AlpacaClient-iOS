@@ -15,6 +15,8 @@ class DiscoveryViewController: BaseViewController {
     
     private let refreshDidTapSubject = PassthroughSubject<Void, Never>()
     private var cancellables = Set<AnyCancellable>()
+    private var state = DiscoveryViewModel.State.default
+    private var dataSource: UICollectionViewDiffableDataSource<Int, String>?
 
     private lazy var messageLabel: UILabel = {
         let label = UILabel()
@@ -28,6 +30,30 @@ class DiscoveryViewController: BaseViewController {
         return label
     }()
     
+    private lazy var collectionView: UICollectionView = {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .estimated(50)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        let section = NSCollectionLayoutSection(group: group)
+        let layout = UICollectionViewCompositionalLayout(section: section)
+
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
+        view.showsHorizontalScrollIndicator = false
+        view.showsVerticalScrollIndicator = true
+        view.isHidden = true
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,16 +61,24 @@ class DiscoveryViewController: BaseViewController {
         
         setupView()
         setupNavigationBar()
+        setupDataSource()
         setupViewModel()
     }
     
     private func setupView() {
         contentView.addSubview(messageLabel)
+        contentView.addSubview(collectionView)
+        
+        collectionView.register(DiscoveredDeviceCollectionViewCell.self, forCellWithReuseIdentifier: DiscoveredDeviceCollectionViewCell.reuseIdentifier)
         
         NSLayoutConstraint.activate([
             messageLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             messageLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
             messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
     }
     
@@ -67,6 +101,17 @@ class DiscoveryViewController: BaseViewController {
         navigationItem.setRightBarButton(rightItem, animated: false)
     }
     
+    private func setupDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Int, String>(collectionView: collectionView) { [weak self] collectionView, indexPath, deviceUniqID -> UICollectionViewCell? in
+            let cellIdentifier = DiscoveredDeviceCollectionViewCell.reuseIdentifier
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? DiscoveredDeviceCollectionViewCell else { return nil }
+            guard let discoveredDevice = self?.state.discoveredDevices.first(where: { $0.uniqueID == deviceUniqID }) else { return cell }
+            
+            cell.setup(with: discoveredDevice)
+            return cell
+        }
+    }
+    
     private func setupViewModel() {
         viewModel = vmCreateHandler(refreshDidTapSubject.eraseToAnyPublisher())
         
@@ -84,6 +129,8 @@ class DiscoveryViewController: BaseViewController {
     }
     
     private func update(with newState: DiscoveryViewModel.State) {
+        self.state = newState
+        
         // Update refresh button animation
         if newState.isDiscovering {
             navigationItem.rightBarButtonItem?.customView?.isUserInteractionEnabled = false
@@ -95,6 +142,9 @@ class DiscoveryViewController: BaseViewController {
         
         // Update message
         if newState.discoveredDevices.isEmpty {
+            collectionView.isHidden = true
+            messageLabel.isHidden = false
+            
             messageLabel.fadeTransition(0.3)
             if newState.isDiscovering {
                 messageLabel.text = "Discovering 🔎...\n\n\nThe screen will be updated once something is found"
@@ -106,9 +156,23 @@ class DiscoveryViewController: BaseViewController {
                 }
             }
         } else {
-            messageLabel.text = "Discovered: \(newState.discoveredDevices)"
+            collectionView.isHidden = false
+            messageLabel.isHidden = true
+            
+            messageLabel.text = nil
+            
+            applySnapshot()
         }
     }
+    
+    private func applySnapshot() {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, String>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(state.discoveredDevices.map(\.uniqueID), toSection: 0)
+
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+
     
     @objc private func updateDidTap() {
         refreshDidTapSubject.send()
