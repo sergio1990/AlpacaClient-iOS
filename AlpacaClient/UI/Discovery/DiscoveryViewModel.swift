@@ -137,6 +137,10 @@ extension DiscoveryViewModel {
         let creator: String
         let version: String
         let apiVersion: UInt16
+     
+        var remoteAddr: String {
+            "\(host):\(port)"
+        }
         
         var uniqueID: String {
             [

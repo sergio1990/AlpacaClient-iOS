@@ -27,6 +27,14 @@ class DiscoveredDeviceCollectionViewCell: UICollectionViewCell {
         
         return label
     }()
+    private lazy var descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 4
+        label.textColor = .black
+        
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,25 +49,37 @@ class DiscoveredDeviceCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(with device: DiscoveryViewModel.DiscoveredDevice) {
-        nameLabel.text = device.name
+        nameLabel.attributedText = NSAttributedString(string: device.name, attributes: [
+            .foregroundColor: UIColor.black,
+            .font: UIFont.systemFont(ofSize: 14, weight: .regular)
+        ])
+        
+        let descriptionText = "\(device.version)\nby \(device.creator)\nremote addr: \(device.remoteAddr)\napi version: v\(device.apiVersion)"
+        descriptionLabel.attributedText = NSAttributedString(string: descriptionText, attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.systemFont(ofSize: 10, weight: .light)
+        ])
+        descriptionLabel.layoutIfNeeded()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         nameLabel.text = nil
+        descriptionLabel.text = nil
     }
     
     private func setupView() {
-        addSubview(contentStackView)
+        contentView.addSubview(contentStackView)
         
         contentStackView.addArrangedSubview(nameLabel)
+        contentStackView.addArrangedSubview(descriptionLabel)
         
         NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
-            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5),
-            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
-            contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5)
+            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            contentStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5),
+            contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -5),
+            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
     }
 }
