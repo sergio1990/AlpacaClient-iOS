@@ -27,10 +27,19 @@ class DiscoveryCoordinator {
             
             return .init(
                 input: vmInput,
-                serviceContext: serviceContext
+                serviceContext: serviceContext,
+                handlers: .init(
+                    selectionHandler: self.discoveredDeviceSelectionHandler
+                )
             )
         }
         
         navigationController.pushViewController(viewController, animated: false)
+    }
+    
+    private func discoveredDeviceSelectionHandler(_ discoveredDevice: DiscoveryViewModel.DiscoveredDevice) {
+        let viewController = DiscoveryDeviceSelectorViewController()
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

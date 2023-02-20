@@ -22,9 +22,17 @@ class DiscoveryViewModel {
         let managementService: AlpacaManagement.Service
     }
     
+    struct Handlers {
+        let selectionHandler: (DiscoveredDevice) -> Void
+    }
+    
     var statePublisher: AnyPublisher<State, Never>
     
-    init(input: Input, serviceContext: ServiceContext) {
+    private let handlers: Handlers
+    
+    init(input: Input, serviceContext: ServiceContext, handlers: Handlers) {
+        self.handlers = handlers
+        
         let sharedRefreshInput = input.refresh.share()
         
         let refreshDidTriggerPublisher = sharedRefreshInput
@@ -82,6 +90,10 @@ class DiscoveryViewModel {
             .prepend(State.default)
             .print("statePublisher")
             .eraseToAnyPublisher()
+    }
+    
+    func handleSelection(_ discoveredDevice: DiscoveredDevice) {
+        handlers.selectionHandler(discoveredDevice)
     }
 }
 

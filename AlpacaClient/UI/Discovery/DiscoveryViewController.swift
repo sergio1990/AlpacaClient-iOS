@@ -106,6 +106,8 @@ class DiscoveryViewController: BaseViewController {
             cell.setup(with: discoveredDevice)
             return cell
         }
+        
+        collectionView.delegate = self
     }
     
     private func setupViewModel() {
@@ -172,5 +174,16 @@ class DiscoveryViewController: BaseViewController {
     
     @objc private func updateDidTap() {
         refreshDidTapSubject.send()
+    }
+}
+
+extension DiscoveryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard indexPath.item < state.discoveredDevices.count else {
+            return
+        }
+        
+        let discoveredDevice = state.discoveredDevices[indexPath.item]
+        viewModel.handleSelection(discoveredDevice)
     }
 }

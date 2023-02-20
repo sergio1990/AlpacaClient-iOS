@@ -30,6 +30,7 @@
 		49BB6E4629A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */; };
 		49BB6E4829A370CA006BE54D /* UICollectionViewCell + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4729A370CA006BE54D /* UICollectionViewCell + Extension.swift */; };
 		49BB6E4A29A399EC006BE54D /* UINavigationBar + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4929A399EC006BE54D /* UINavigationBar + Extension.swift */; };
+		49BB6E5429A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E5329A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveredDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
 		49BB6E4729A370CA006BE54D /* UICollectionViewCell + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell + Extension.swift"; sourceTree = "<group>"; };
 		49BB6E4929A399EC006BE54D /* UINavigationBar + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + Extension.swift"; sourceTree = "<group>"; };
+		49BB6E5329A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryDeviceSelectorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */,
 				49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */,
 				49BB6E3C29A136E4006BE54D /* DiscoveryViewModel.swift */,
+				49BB6E5329A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				49BB6E3929A136C2006BE54D /* DiscoveryCoordinator.swift in Sources */,
 				49BB6E3F29A143C4006BE54D /* UIImage + Extension.swift in Sources */,
 				4967D44229913FBD00592094 /* SceneDelegate.swift in Sources */,
+				49BB6E5429A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift in Sources */,
 				4963FDBE299E566D006EEDCF /* HTTPOperation.swift in Sources */,
 				49BB6E4829A370CA006BE54D /* UICollectionViewCell + Extension.swift in Sources */,
 			);
