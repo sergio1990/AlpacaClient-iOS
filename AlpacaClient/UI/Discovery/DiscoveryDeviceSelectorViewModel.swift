@@ -43,7 +43,12 @@ class DiscoveryDeviceSelectorViewModel {
                         let configuredDevicesResponse = try await serviceContext.managementService.configuredDevices(version: data.apiVersion)
                         Log.info(configuredDevicesResponse)
                         let configuredDevices = configuredDevicesResponse.map { configuredDeviceInfo in
-                            ConfiguredDevice(name: configuredDeviceInfo.deviceName)
+                            ConfiguredDevice(
+                                name: configuredDeviceInfo.deviceName,
+                                type: configuredDeviceInfo.deviceType,
+                                number: configuredDeviceInfo.deviceNumber,
+                                uniqueID: configuredDeviceInfo.uniqueID
+                            )
                         }
                         promise(.success(.configuredDevicesDidFound(devices: configuredDevices)))
                     }
@@ -85,5 +90,8 @@ extension DiscoveryDeviceSelectorViewModel {
     
     struct ConfiguredDevice {
         let name: String
+        let type: String
+        let number: UInt32
+        let uniqueID: String
     }
 }
