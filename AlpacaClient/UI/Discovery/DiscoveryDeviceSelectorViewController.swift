@@ -16,11 +16,20 @@ class DiscoveryDeviceSelectorViewController: BaseViewController {
     private let viewDidAppearSubject = PassthroughSubject<Void, Never>()
     private var cancellables = Set<AnyCancellable>()
     
+    private lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView(style: .large)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.hidesWhenStopped = true
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
+        setupView()
         setupNavigationBar()
         setupViewModel()
     }
@@ -29,6 +38,15 @@ class DiscoveryDeviceSelectorViewController: BaseViewController {
         super.viewDidAppear(animated)
         
         viewDidAppearSubject.send()
+    }
+    
+    private func setupView() {
+        contentView.addSubview(activityIndicatorView)
+        
+        NSLayoutConstraint.activate([
+            activityIndicatorView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            activityIndicatorView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
     }
     
     private func setupNavigationBar() {
@@ -46,9 +64,19 @@ class DiscoveryDeviceSelectorViewController: BaseViewController {
     
     private func setupVMSubscriptions() {
         viewModel.statePublisher
-            .sink { state in
+            .receive(on: RunLoop.main)
+            .sink { [weak self] state in
+                self?.update(with: state)
                 Log.info(state)
             }
             .store(in: &cancellables)
+    }
+    
+    private func update(with newState: DiscoveryDeviceSelectorViewModel.State) {
+        if newState.isLoading {
+            activityIndicatorView.startAnimating()
+        } else {
+            activityIndicatorView.stopAnimating()
+        }
     }
 }
