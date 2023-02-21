@@ -40,12 +40,12 @@ class DiscoveryDeviceSelectorViewModel {
             .flatMap { _ in
                 Future<StateChangeReason, Never> { promise in
                     Task {
-                        let registeredDevicesResponse = try await serviceContext.managementService.configuredDevices(version: data.apiVersion)
-                        Log.info(registeredDevicesResponse)
-                        let registeredDevices = registeredDevicesResponse.map { registeredDeviceInfo in
-                            RegisteredDevice(name: registeredDeviceInfo.deviceName)
+                        let configuredDevicesResponse = try await serviceContext.managementService.configuredDevices(version: data.apiVersion)
+                        Log.info(configuredDevicesResponse)
+                        let configuredDevices = configuredDevicesResponse.map { configuredDeviceInfo in
+                            ConfiguredDevice(name: configuredDeviceInfo.deviceName)
                         }
-                        promise(.success(.registeredDevicesDidFound(devices: registeredDevices)))
+                        promise(.success(.configuredDevicesDidFound(devices: configuredDevices)))
                     }
                 }
             }
@@ -62,28 +62,28 @@ class DiscoveryDeviceSelectorViewModel {
 
 extension DiscoveryDeviceSelectorViewModel {
     struct State {
-        let registeredDevices: [RegisteredDevice]
+        let configuredDevices: [ConfiguredDevice]
         
         static let `default` = State(
-            registeredDevices: []
+            configuredDevices: []
         )
         
         func change(with reason: StateChangeReason) -> Self {
             switch reason {
-            case let .registeredDevicesDidFound(devices):
-                var newRegisteredDevices = registeredDevices
-                newRegisteredDevices.append(contentsOf: devices)
+            case let .configuredDevicesDidFound(devices):
+                var newConfiguredDevices = configuredDevices
+                newConfiguredDevices.append(contentsOf: devices)
                 
-                return .init(registeredDevices: newRegisteredDevices)
+                return .init(configuredDevices: newConfiguredDevices)
             }
         }
     }
     
     enum StateChangeReason {
-        case registeredDevicesDidFound(devices: [RegisteredDevice])
+        case configuredDevicesDidFound(devices: [ConfiguredDevice])
     }
     
-    struct RegisteredDevice {
+    struct ConfiguredDevice {
         let name: String
     }
 }
