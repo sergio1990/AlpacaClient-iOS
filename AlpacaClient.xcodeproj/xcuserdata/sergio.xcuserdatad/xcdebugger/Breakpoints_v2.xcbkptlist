@@ -3,4 +3,54 @@
    uuid = "47742FE2-E329-4BF0-8AF7-F718346D8CE1"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6674F89A-6CAB-4F5E-A505-F033193C97B8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AlpacaClient/UI/Discovery/DiscoveryDeviceSelectorViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "setupDataSource()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6674F89A-6CAB-4F5E-A505-F033193C97B8 - a4b9f49ce0cda297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UICollectionView, Foundation.IndexPath, Swift.String) -&gt; Swift.Optional&lt;__C.UICollectionViewCell&gt; in AlpacaClient.DiscoveryDeviceSelectorViewController.setupDataSource() -&gt; ()"
+                  moduleName = "AlpacaClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergio/Work/learnings/ios/AlpacaClient/AlpacaClient/AlpacaClient/UI/Discovery/DiscoveryDeviceSelectorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "683">
+               </Location>
+               <Location
+                  uuid = "6674F89A-6CAB-4F5E-A505-F033193C97B8 - 46a5c1982f30034c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AlpacaClient.DiscoveryDeviceSelectorViewModel.ConfiguredDevice) -&gt; Swift.Bool in closure #1 (__C.UICollectionView, Foundation.IndexPath, Swift.String) -&gt; Swift.Optional&lt;__C.UICollectionViewCell&gt; in AlpacaClient.DiscoveryDeviceSelectorViewController.setupDataSource() -&gt; ()"
+                  moduleName = "AlpacaClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sergio/Work/learnings/ios/AlpacaClient/AlpacaClient/AlpacaClient/UI/Discovery/DiscoveryDeviceSelectorViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

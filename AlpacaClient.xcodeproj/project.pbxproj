@@ -32,6 +32,7 @@
 		49BB6E4A29A399EC006BE54D /* UINavigationBar + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E4929A399EC006BE54D /* UINavigationBar + Extension.swift */; };
 		49BB6E5429A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB6E5329A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift */; };
 		49C54BC529A4AF73007C6B82 /* DiscoveryDeviceSelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C54BC429A4AF73007C6B82 /* DiscoveryDeviceSelectorViewModel.swift */; };
+		49C54BC729A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C54BC629A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		49BB6E4929A399EC006BE54D /* UINavigationBar + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar + Extension.swift"; sourceTree = "<group>"; };
 		49BB6E5329A3F2ED006BE54D /* DiscoveryDeviceSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryDeviceSelectorViewController.swift; sourceTree = "<group>"; };
 		49C54BC429A4AF73007C6B82 /* DiscoveryDeviceSelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryDeviceSelectorViewModel.swift; sourceTree = "<group>"; };
+		49C54BC629A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredDeviceCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				49BB6E4529A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift */,
+				49C54BC629A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				49C54BC529A4AF73007C6B82 /* DiscoveryDeviceSelectorViewModel.swift in Sources */,
 				49BB6E4629A36D60006BE54D /* DiscoveredDeviceCollectionViewCell.swift in Sources */,
 				4963FDC4299E614F006EEDCF /* Service.swift in Sources */,
+				49C54BC729A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift in Sources */,
 				4963FDCA299E6931006EEDCF /* Log.swift in Sources */,
 				49BB6E3B29A136D2006BE54D /* DiscoveryViewController.swift in Sources */,
 				4963FDCC299E989C006EEDCF /* AlpacaManagement.swift in Sources */,

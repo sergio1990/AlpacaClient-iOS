@@ -36,7 +36,7 @@ class DiscoveryDeviceSelectorViewModel {
         let sharedViewDidLoadInput = input.viewDidAppear.share()
         
         let deviceDidFoundPublisher = sharedViewDidLoadInput
-            .delay(for: .seconds(2), scheduler: RunLoop.main, options: .none)
+            .delay(for: .seconds(1), scheduler: RunLoop.main, options: .none)
             .flatMap { _ in
                 Future<StateChangeReason, Never> { promise in
                     Task {

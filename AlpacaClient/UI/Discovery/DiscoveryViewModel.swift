@@ -48,10 +48,10 @@ class DiscoveryViewModel {
             }
         let refreshTimeoutPublisher = sharedRefreshInput
             .map { StateChangeReason.refreshDidTimeout }
-            .delay(for: .seconds(10), scheduler: RunLoop.main, options: .none)
+            .delay(for: .seconds(5), scheduler: RunLoop.main, options: .none)
         
         let deviceDiscoveredPublisher = serviceContext.discoveryService.discoveryInfoPublisher
-            .delay(for: .seconds(2), scheduler: RunLoop.main, options: .none)
+            .delay(for: .seconds(1), scheduler: RunLoop.main, options: .none)
             .flatMap({ [serviceContext] discoveryInfo in
                 Future<StateChangeReason, Never> { promise in
                     serviceContext.managementService.configure(with: discoveryInfo.host, port: discoveryInfo.port)
