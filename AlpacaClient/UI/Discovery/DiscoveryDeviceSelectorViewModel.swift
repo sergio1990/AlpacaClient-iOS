@@ -67,9 +67,11 @@ class DiscoveryDeviceSelectorViewModel {
 
 extension DiscoveryDeviceSelectorViewModel {
     struct State {
+        let isLoading: Bool
         let configuredDevices: [ConfiguredDevice]
         
         static let `default` = State(
+            isLoading: true,
             configuredDevices: []
         )
         
@@ -79,7 +81,10 @@ extension DiscoveryDeviceSelectorViewModel {
                 var newConfiguredDevices = configuredDevices
                 newConfiguredDevices.append(contentsOf: devices)
                 
-                return .init(configuredDevices: newConfiguredDevices)
+                return .init(
+                    isLoading: false,
+                    configuredDevices: newConfiguredDevices
+                )
             }
         }
     }
