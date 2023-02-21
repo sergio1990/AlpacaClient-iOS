@@ -7,14 +7,28 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class DiscoveryDeviceSelectorViewController: BaseViewController {
+    var vmCreateHandler: DiscoveryDeviceSelectorViewModel.CreateHandler!
+    private var viewModel: DiscoveryDeviceSelectorViewModel!
+    
+    private let viewDidAppearSubject = PassthroughSubject<Void, Never>()
+    private var cancellables = Set<AnyCancellable>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
         setupNavigationBar()
+        setupViewModel()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewDidAppearSubject.send()
     }
     
     private func setupNavigationBar() {
@@ -22,18 +36,19 @@ class DiscoveryDeviceSelectorViewController: BaseViewController {
         navigationController?.navigationBar.setBottomBorderColor(color: .lightGray.withAlphaComponent(0.5), height: 1)
         
         navigationItem.title = "Device Selector"
+    }
+    
+    private func setupViewModel() {
+        viewModel = vmCreateHandler(viewDidAppearSubject.eraseToAnyPublisher())
         
-//        let refreshIcon = UIImage(named: "Icons/refresh")?.resize(withSize: .init(width: 20, height: 20))
-//        let iconSize = CGRect(origin: .zero, size: refreshIcon!.size)
-//        let iconButton = UIButton(frame: iconSize)
-//        iconButton.addTarget(self, action: #selector(updateDidTap), for: .touchUpInside)
-//
-//        iconButton.setBackgroundImage(refreshIcon, for: [])
-//
-//        let rightItem = UIBarButtonItem(customView: iconButton)
-//        rightItem.tintColor = .black
-//
-//        navigationItem.setHidesBackButton(true, animated: false)
-//        navigationItem.setRightBarButton(rightItem, animated: false)
+        setupVMSubscriptions()
+    }
+    
+    private func setupVMSubscriptions() {
+        viewModel.statePublisher
+            .sink { state in
+                Log.info(state)
+            }
+            .store(in: &cancellables)
     }
 }

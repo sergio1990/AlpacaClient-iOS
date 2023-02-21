@@ -39,6 +39,17 @@ class DiscoveryCoordinator {
     
     private func discoveredDeviceSelectionHandler(_ discoveredDevice: DiscoveryViewModel.DiscoveredDevice) {
         let viewController = DiscoveryDeviceSelectorViewController()
+        viewController.vmCreateHandler = { input in
+            let managementService = AlpacaManagement.Service()
+            managementService.configure(with: discoveredDevice.host, port: discoveredDevice.port)
+            
+            return .init(
+                data: .init(apiVersion: discoveredDevice.apiVersion),
+                input: .init(viewDidAppear: input),
+                serviceContext: .init(managementService: managementService),
+                handlers: .init()
+            )
+        }
         
         navigationController.pushViewController(viewController, animated: true)
     }
