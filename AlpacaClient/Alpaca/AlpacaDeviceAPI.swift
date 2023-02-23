@@ -8,9 +8,7 @@
 import Foundation
 
 enum AlpacaDeviceAPI {
-    struct NoValue {
-        
-    }
+    struct NoValue {}
     
     enum DeviceType: String {
         case focuser = "Focuser"

@@ -8,29 +8,10 @@
 import Foundation
 
 extension AlpacaManagement {
-    class Service {
-        struct Error: Swift.Error {
-            let message: String
-            let data: Data?
-            
-            lazy var dataString: String = {
-                guard let data = data else {
-                    return "no data"
-                }
-                
-                return String(data: data, encoding: .utf8) ?? "no data"
-            }()
-            
-            mutating func toString() -> String {
-                "Error message:\(message)\nAdditional data:\(dataString)"
-            }
-        }
-        
+    class Service: AlpacaClientBaseAPIService {
         private var urlProvider: URLProvider
         
-        var networkManager = NetworkManager.shared
-        
-        init() {
+        override init() {
             urlProvider = .init(host: "", port: 0)
         }
         
@@ -43,7 +24,7 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url)
+            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
             
             guard isSuccess else {
                 throw Error(message: "Failed getting API versions from remote!", data: data)
@@ -65,7 +46,7 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url)
+            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
             
             guard isSuccess else {
                 throw Error(message: "Failed getting description from remote!", data: data)
@@ -92,7 +73,7 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url)
+            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
             
             guard isSuccess else {
                 throw Error(message: "Failed getting configured devices from remote!", data: data)
@@ -136,26 +117,6 @@ private extension AlpacaManagement {
         
         func configuredDevices(version: UInt16) -> URL? {
             URL(string: "\(hostAndPort)/management/v\(version)/configureddevices")
-        }
-    }
-    
-    struct ApiPayload<ValueType: Decodable>: Decodable {
-        let value: ValueType
-        let clientTransactionId: UInt32
-        let serverTransactionId: UInt32
-        
-        private enum CodingKeys: String, CodingKey {
-            case Value
-            case ClientTransactionID
-            case ServerTransactionID
-        }
-        
-        init(from decoder: Decoder) throws {
-            let rootContainer = try decoder.container(keyedBy: CodingKeys.self)
-            
-            value = try rootContainer.decode(ValueType.self, forKey: .Value)
-            clientTransactionId = try rootContainer.decode(UInt32.self, forKey: .ClientTransactionID)
-            serverTransactionId = try rootContainer.decode(UInt32.self, forKey: .ServerTransactionID)
         }
     }
     

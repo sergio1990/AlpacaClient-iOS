@@ -20,9 +20,11 @@ class NetworkManager {
     
     var downloader: HTTPDownloader = URLSession.shared
     
-    func `get`(_ url: URL) async -> (Data?, Bool) {
+    func `get`(_ url: URL, data: [String: String] = [:]) async -> (Data?, Bool) {
         return await withCheckedContinuation({ continuation in
-            var urlRequest = URLRequest(url: url)
+            let queryItems: [URLQueryItem] = data.map { .init(name: $0.key, value: $0.value) }
+            var urlWithQueryItems = url.appending(queryItems: queryItems)
+            var urlRequest = URLRequest(url: urlWithQueryItems)
             urlRequest.httpMethod = "GET"
             
             let operation = HTTPOperation(downloader: downloader, urlRequest: urlRequest) { data, isSuccess in
@@ -33,14 +35,14 @@ class NetworkManager {
         })
     }
     
-    func put(_ url: URL, data: [AnyHashable: Any]) async -> (Data?, Bool) {
+    func put(_ url: URL, data: [String: String]) async -> (Data?, Bool) {
         return await withCheckedContinuation({ continuation in
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "PUT"
             urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
             
             let bodyString = data
-                .map { (key: AnyHashable, value: Any) in
+                .map { (key: AnyHashable, value: String) in
                     "\(key)=\(value)"
                 }
                 .joined(separator: "&")

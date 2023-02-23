@@ -10,6 +10,8 @@
 		495A72A829A613FC0034A7A9 /* AlpacaDeviceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A72A729A613FC0034A7A9 /* AlpacaDeviceAPI.swift */; };
 		495A72AA29A6141E0034A7A9 /* CommonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A72A929A6141E0034A7A9 /* CommonService.swift */; };
 		495A72AC29A75DEE0034A7A9 /* FocuserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A72AB29A75DEE0034A7A9 /* FocuserService.swift */; };
+		495A72AE29A779510034A7A9 /* AlpacaClientTransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A72AD29A779510034A7A9 /* AlpacaClientTransactionInfo.swift */; };
+		495A72B029A77E750034A7A9 /* AlpacaClientBaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495A72AF29A77E750034A7A9 /* AlpacaClientBaseAPIService.swift */; };
 		4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBB299E553D006EEDCF /* HTTPDownloader.swift */; };
 		4963FDBE299E566D006EEDCF /* HTTPOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBD299E566D006EEDCF /* HTTPOperation.swift */; };
 		4963FDC0299E5F0C006EEDCF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4963FDBF299E5F0C006EEDCF /* NetworkManager.swift */; };
@@ -42,6 +44,8 @@
 		495A72A729A613FC0034A7A9 /* AlpacaDeviceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaDeviceAPI.swift; sourceTree = "<group>"; };
 		495A72A929A6141E0034A7A9 /* CommonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonService.swift; sourceTree = "<group>"; };
 		495A72AB29A75DEE0034A7A9 /* FocuserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocuserService.swift; sourceTree = "<group>"; };
+		495A72AD29A779510034A7A9 /* AlpacaClientTransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaClientTransactionInfo.swift; sourceTree = "<group>"; };
+		495A72AF29A77E750034A7A9 /* AlpacaClientBaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlpacaClientBaseAPIService.swift; sourceTree = "<group>"; };
 		4963FDBB299E553D006EEDCF /* HTTPDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDownloader.swift; sourceTree = "<group>"; };
 		4963FDBD299E566D006EEDCF /* HTTPOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPOperation.swift; sourceTree = "<group>"; };
 		4963FDBF299E5F0C006EEDCF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				4963FDCB299E989C006EEDCF /* AlpacaManagement.swift */,
 				4963FDCD299E9DBE006EEDCF /* AlpacaDiscovery.swift */,
 				495A72A729A613FC0034A7A9 /* AlpacaDeviceAPI.swift */,
+				495A72AD29A779510034A7A9 /* AlpacaClientTransactionInfo.swift */,
+				495A72AF29A77E750034A7A9 /* AlpacaClientBaseAPIService.swift */,
 			);
 			path = Alpaca;
 			sourceTree = "<group>";
@@ -300,10 +306,12 @@
 				49C54BC729A53917007C6B82 /* ConfiguredDeviceCollectionViewCell.swift in Sources */,
 				495A72A829A613FC0034A7A9 /* AlpacaDeviceAPI.swift in Sources */,
 				4963FDCA299E6931006EEDCF /* Log.swift in Sources */,
+				495A72AE29A779510034A7A9 /* AlpacaClientTransactionInfo.swift in Sources */,
 				49BB6E3B29A136D2006BE54D /* DiscoveryViewController.swift in Sources */,
 				4963FDCC299E989C006EEDCF /* AlpacaManagement.swift in Sources */,
 				4963FDBC299E553D006EEDCF /* HTTPDownloader.swift in Sources */,
 				4967D44029913FBD00592094 /* AppDelegate.swift in Sources */,
+				495A72B029A77E750034A7A9 /* AlpacaClientBaseAPIService.swift in Sources */,
 				4963FDCE299E9DBE006EEDCF /* AlpacaDiscovery.swift in Sources */,
 				49BB6E4329A26897006BE54D /* UIView + Extension.swift in Sources */,
 				495A72AC29A75DEE0034A7A9 /* FocuserService.swift in Sources */,
