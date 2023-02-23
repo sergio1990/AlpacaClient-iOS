@@ -60,7 +60,7 @@
 		4967D44829913FC000592094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4967D44B29913FC000592094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4967D44D29913FC000592094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlpacaClientDebug.entitlements; sourceTree = "<group>"; };
+		496814B32993BCD900961BF6 /* AlpacaClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AlpacaClient.entitlements; sourceTree = "<group>"; };
 		497D056D299BF47600915009 /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryService.swift; sourceTree = "<group>"; };
 		49BB6E3829A136C2006BE54D /* DiscoveryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryCoordinator.swift; sourceTree = "<group>"; };
 		49BB6E3A29A136D2006BE54D /* DiscoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 				4963FDC5299E686F006EEDCF /* Extensions */,
 				4963FDC2299E6121006EEDCF /* Alpaca */,
 				4963FDBA299E551F006EEDCF /* NetworkManagement */,
-				496814B32993BCD900961BF6 /* AlpacaClientDebug.entitlements */,
+				496814B32993BCD900961BF6 /* AlpacaClient.entitlements */,
 				4967D43F29913FBD00592094 /* AppDelegate.swift */,
 				4967D44129913FBD00592094 /* SceneDelegate.swift */,
 				4967D44829913FC000592094 /* Assets.xcassets */,
@@ -463,7 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AlpacaClient/AlpacaClientDebug.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AlpacaClient/AlpacaClient.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -501,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AlpacaClient/AlpacaClient.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
