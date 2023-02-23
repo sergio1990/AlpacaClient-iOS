@@ -35,23 +35,15 @@ extension AlpacaDeviceAPI {
             }
         }
         
-        private let urlProvider: URLProvider
-        
+        private let baseURLString: String
         var networkManager = NetworkManager.shared
         
-        init(alpacaHost: String, alpacaPort: UInt32, apiVersion: UInt32, deviceType: DeviceType, deviceNumber: UInt32, networkManager: NetworkManager = NetworkManager.shared) {
-            self.urlProvider = .init(
-                host: alpacaHost,
-                port: alpacaPort,
-                apiVersion: apiVersion,
-                deviceType: deviceType,
-                deviceNumber: deviceNumber
-            )
-            self.networkManager = networkManager
+        init(alpacaHost: String, alpacaPort: UInt32, apiVersion: UInt32, deviceType: DeviceType, deviceNumber: UInt32) {
+            baseURLString = "http://\(alpacaHost):\(alpacaPort)/api/v\(apiVersion)/\(deviceType.rawValue.lowercased())/\(deviceNumber)/"
         }
         
         func isConnected() async throws -> Bool {
-            guard let url = urlProvider.connectedURL else {
+            guard let url = buildActionURL("connected") else {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
@@ -73,21 +65,14 @@ extension AlpacaDeviceAPI {
             
             return payload.value
         }
+        
+        func buildActionURL(_ actionName: String) -> URL? {
+            URL(string: "\(baseURLString)\(actionName)")
+        }
     }
 }
 
-private extension AlpacaDeviceAPI {
-    struct URLProvider {
-        let connectedURL: URL?
-        
-        init(host: String, port: UInt32, apiVersion: UInt32, deviceType: DeviceType, deviceNumber: UInt32) {
-            let hostAndPort = "http://\(host):\(port)"
-            let commonPart = "\(hostAndPort)/api/v\(apiVersion)/\(deviceType.rawValue.lowercased())/\(deviceNumber)/"
-            
-            connectedURL = URL(string: "\(commonPart)connected")
-        }
-    }
-    
+extension AlpacaDeviceAPI {
     struct ApiPayload<ValueType: Decodable>: Decodable {
         let value: ValueType
         let errorNumber: Int32
