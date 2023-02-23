@@ -9,7 +9,7 @@ import Foundation
 
 extension ASCOMAlpaca {
     class BaseAPIService {
-        var networkManager = NetworkManager.shared
+        var networkManager: ASCOMAlpacaNetworkManagerProtocol = NetworkManager.shared
         var clientTransactionInfo = ClientTransactionInfo.shared
         
         func buildBody(with customEntries: [String: String] = [:]) async -> [String: String] {

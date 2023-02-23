@@ -38,3 +38,8 @@ enum ASCOMAlpaca {
         }
     }
 }
+
+protocol ASCOMAlpacaNetworkManagerProtocol {
+    func `get`(_ url: URL, data: [String: String]) async -> (Data?, Bool)
+    func put(_ url: URL, data: [String: String]) async -> (Data?, Bool)
+}

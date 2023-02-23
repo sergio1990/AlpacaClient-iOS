@@ -58,3 +58,6 @@ class NetworkManager {
         })
     }
 }
+
+extension NetworkManager: ASCOMAlpacaNetworkManagerProtocol {
+}
