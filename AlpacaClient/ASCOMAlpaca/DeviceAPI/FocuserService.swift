@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AlpacaDeviceAPI {
+extension ASCOMAlpaca.DeviceAPI {
     class FocuserService: Service {
         init(alpacaHost: String, alpacaPort: UInt32, apiVersion: UInt32, deviceNumber: UInt32) {
             super.init(
@@ -21,7 +21,7 @@ extension AlpacaDeviceAPI {
         
         func isMoving() async throws -> Bool {
             guard let url = buildActionURL("ismoving") else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             let value: Bool = try await executeGetAction(url)

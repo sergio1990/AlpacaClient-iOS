@@ -40,7 +40,7 @@ class DiscoveryCoordinator {
     private func discoveredDeviceSelectionHandler(_ discoveredDevice: DiscoveryViewModel.DiscoveredDevice) {
         let viewController = DiscoveryDeviceSelectorViewController()
         viewController.vmCreateHandler = { input in
-            let managementService = AlpacaManagement.Service()
+            let managementService = ASCOMAlpaca.Management.Service()
             managementService.configure(with: discoveredDevice.host, port: discoveredDevice.port)
             
             return .init(

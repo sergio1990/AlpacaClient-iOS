@@ -7,10 +7,8 @@
 
 import Foundation
 
-enum AlpacaDeviceAPI {
-    struct NoValue {}
-    
-    enum DeviceType: String {
-        case focuser = "Focuser"
+extension ASCOMAlpaca {
+    enum DeviceAPI {
+        
     }
 }

@@ -20,7 +20,7 @@ class DiscoveryDeviceSelectorViewModel {
     }
     
     struct ServiceContext {
-        let managementService: AlpacaManagement.Service
+        let managementService: ASCOMAlpaca.Management.Service
     }
     
     struct Handlers {

@@ -7,18 +7,18 @@
 
 import Foundation
 
-extension AlpacaDeviceAPI {
-    class Service: AlpacaClientBaseAPIService {        
+extension ASCOMAlpaca.DeviceAPI {
+    class Service: ASCOMAlpaca.BaseAPIService {
         private let baseURLString: String
         private var clientTransactionId = 0
         
-        init(alpacaHost: String, alpacaPort: UInt32, apiVersion: UInt32, deviceType: DeviceType, deviceNumber: UInt32) {
+        init(alpacaHost: String, alpacaPort: UInt32, apiVersion: UInt32, deviceType: ASCOMAlpaca.DeviceType, deviceNumber: UInt32) {
             baseURLString = "http://\(alpacaHost):\(alpacaPort)/api/v\(apiVersion)/\(deviceType.rawValue.lowercased())/\(deviceNumber)/"
         }
         
         func isConnected() async throws -> Bool {
             guard let url = buildActionURL("connected") else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             let value: Bool = try await executeGetAction(url)
@@ -27,7 +27,7 @@ extension AlpacaDeviceAPI {
         
         func connected(_ value: Bool) async throws {
             guard let url = buildActionURL("connected") else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             try await executePutAction(url, data: [

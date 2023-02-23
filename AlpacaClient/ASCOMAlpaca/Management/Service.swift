@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension AlpacaManagement {
-    class Service: AlpacaClientBaseAPIService {
+extension ASCOMAlpaca.Management {
+    class Service: ASCOMAlpaca.BaseAPIService {
         private var urlProvider: URLProvider
         
         override init() {
@@ -21,7 +21,7 @@ extension AlpacaManagement {
         
         func apiVersions() async throws -> Versions {
             guard let url = urlProvider.apiVersions else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             let value: [UInt16] = try await executeGetAction(url)
@@ -31,7 +31,7 @@ extension AlpacaManagement {
         
         func description(version: UInt16) async throws -> Description {
             guard let url = urlProvider.description(version: version) else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             let value: Payload.DescriptionValue = try await executeGetAction(url)
@@ -46,7 +46,7 @@ extension AlpacaManagement {
         
         func configuredDevices(version: UInt16) async throws -> [ConfiguredDevice] {
             guard let url = urlProvider.configuredDevices(version: version) else {
-                throw Error(message: "Invalid URL!", data: nil)
+                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
             }
             
             let value: [Payload.ConfiguredDeviceValue] = try await executeGetAction(url)
@@ -63,7 +63,7 @@ extension AlpacaManagement {
     }
 }
 
-private extension AlpacaManagement {
+private extension ASCOMAlpaca.Management.Service {
     struct URLProvider {
         let apiVersions: URL?
         

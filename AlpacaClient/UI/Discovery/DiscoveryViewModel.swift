@@ -18,8 +18,8 @@ class DiscoveryViewModel {
     }
     
     struct ServiceContext {
-        let discoveryService: AlpacaDiscovery.Service
-        let managementService: AlpacaManagement.Service
+        let discoveryService: ASCOMAlpaca.Discovery.Service
+        let managementService: ASCOMAlpaca.Management.Service
     }
     
     struct Handlers {
@@ -73,7 +73,7 @@ class DiscoveryViewModel {
                             )
                             promise(.success(StateChangeReason.deviceDidDiscover(device: discoveredDevice)))
                         } catch {
-                            if var serviceError = error as? AlpacaManagement.Service.Error {
+                            if var serviceError = error as? ASCOMAlpaca.Error {
                                 Log.error("Error when requesting management API!\n\(serviceError.toString())")
                             } else {
                                 Log.error("Error when requesting management API!\n\(error.localizedDescription)")

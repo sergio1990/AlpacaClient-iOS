@@ -13,7 +13,7 @@ private let discoveryMessage = "alpacadiscovery1"
 private let discoveryHort = "255.255.255.255"
 private let discoveryPort: UInt16 = 32227
 
-extension AlpacaDiscovery {
+extension ASCOMAlpaca.Discovery {
     class Service: NSObject {
         struct ConnectError: Error {}
         
@@ -65,7 +65,7 @@ extension AlpacaDiscovery {
     }
 }
     
-extension AlpacaDiscovery.Service: GCDAsyncUdpSocketDelegate {
+extension ASCOMAlpaca.Discovery.Service: GCDAsyncUdpSocketDelegate {
     func udpSocketDidClose(_ sock: GCDAsyncUdpSocket, withError error: Error?) {
         Log.severe("UDPSocket: did close due to \(error?.localizedDescription ?? "unknown") error")
     }
@@ -100,7 +100,7 @@ extension AlpacaDiscovery.Service: GCDAsyncUdpSocketDelegate {
         
         Log.info("UDPSocket: Received \(stringData) from \(hostString):\(port)")
         
-        guard let payload = AlpacaDiscovery.Payload.decode(jsonData: data) else {
+        guard let payload = Payload.decode(jsonData: data) else {
             return
         }
         
@@ -108,7 +108,7 @@ extension AlpacaDiscovery.Service: GCDAsyncUdpSocketDelegate {
     }
 }
 
-private extension AlpacaDiscovery {
+private extension ASCOMAlpaca.Discovery.Service {
     struct Payload: Decodable {
         let alpacaPort: UInt16
         
