@@ -24,21 +24,9 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
+            let value: [UInt16] = try await executeGetAction(url)
             
-            guard isSuccess else {
-                throw Error(message: "Failed getting API versions from remote!", data: data)
-            }
-            
-            guard let data = data else {
-                throw Error(message: "Response data isn't available!", data: nil)
-            }
-            
-            guard let payload = ApiPayload<[UInt16]>.decode(jsonData: data) else {
-                throw Error(message: "Failed parsing the response data!", data: data)
-            }
-            
-            return .init(versions: payload.value)
+            return .init(versions: value)
         }
         
         func description(version: UInt16) async throws -> Description {
@@ -46,25 +34,13 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
-            
-            guard isSuccess else {
-                throw Error(message: "Failed getting description from remote!", data: data)
-            }
-            
-            guard let data = data else {
-                throw Error(message: "Response data isn't available!", data: nil)
-            }
-            
-            guard let payload = ApiPayload<Payload.DescriptionValue>.decode(jsonData: data) else {
-                throw Error(message: "Failed parsing the response data!", data: data)
-            }
+            let value: Payload.DescriptionValue = try await executeGetAction(url)
             
             return .init(
-                serverName: payload.value.serverName,
-                manufacturer: payload.value.manufacturer,
-                manufacturerVersion: payload.value.manufacturerVersion,
-                location: payload.value.location
+                serverName: value.serverName,
+                manufacturer: value.manufacturer,
+                manufacturerVersion: value.manufacturerVersion,
+                location: value.location
             )
         }
         
@@ -73,21 +49,9 @@ extension AlpacaManagement {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
+            let value: [Payload.ConfiguredDeviceValue] = try await executeGetAction(url)
             
-            guard isSuccess else {
-                throw Error(message: "Failed getting configured devices from remote!", data: data)
-            }
-            
-            guard let data = data else {
-                throw Error(message: "Response data isn't available!", data: nil)
-            }
-            
-            guard let payload = ApiPayload<[Payload.ConfiguredDeviceValue]>.decode(jsonData: data) else {
-                throw Error(message: "Failed parsing the response data!", data: data)
-            }
-            
-            return payload.value.map { configuredDevice in
+            return value.map { configuredDevice in
                     .init(
                         deviceName: configuredDevice.deviceName,
                         deviceType: configuredDevice.deviceType,

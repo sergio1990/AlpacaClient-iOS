@@ -19,6 +19,44 @@ class AlpacaClientBaseAPIService {
             "ClientTransactionID": String(transactioID)
         ]){ (current, _) in current }
     }
+    
+    func executeGetAction<ValueType: Decodable>(_ url: URL, data: [String: String] = [:]) async throws -> ValueType {
+        let (data, isSuccess) = await networkManager.get(url, data: buildBody(with: data))
+        
+        guard isSuccess else {
+            throw Error(message: "Failed getting data from remote!", data: data)
+        }
+        
+        guard let data = data else {
+            throw Error(message: "Response data isn't available!", data: nil)
+        }
+        
+        guard let payload = ApiPayload<ValueType>.decode(jsonData: data) else {
+            throw Error(message: "Failed parsing the response data!", data: data)
+        }
+        
+        try payload.checkForASCOMError()
+        
+        return payload.value
+    }
+    
+    func executePutAction(_ url: URL, data: [String: String]) async throws {
+        let (data, isSuccess) = await networkManager.put(url, data: buildBody(with: data))
+        
+        guard isSuccess else {
+            throw Error(message: "Failed putting data to remote!", data: data)
+        }
+        
+        guard let data = data else {
+            throw Error(message: "Response data isn't available!", data: nil)
+        }
+        
+        guard let payload = ApiPayload<NoValue>.decode(jsonData: data) else {
+            throw Error(message: "Failed parsing the response data!", data: data)
+        }
+        
+        try payload.checkForASCOMError()
+    }
 }
 
 extension AlpacaClientBaseAPIService {

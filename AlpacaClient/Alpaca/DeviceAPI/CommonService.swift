@@ -21,23 +21,8 @@ extension AlpacaDeviceAPI {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.get(url, data: buildBody())
-            
-            guard isSuccess else {
-                throw Error(message: "Failed getting is connected status from remote!", data: data)
-            }
-            
-            guard let data = data else {
-                throw Error(message: "Response data isn't available!", data: nil)
-            }
-            
-            guard let payload = ApiPayload<Bool>.decode(jsonData: data) else {
-                throw Error(message: "Failed parsing the response data!", data: data)
-            }
-            
-            try payload.checkForASCOMError()
-            
-            return payload.value
+            let value: Bool = try await executeGetAction(url)
+            return value
         }
         
         func connected(_ value: Bool) async throws {
@@ -45,23 +30,9 @@ extension AlpacaDeviceAPI {
                 throw Error(message: "Invalid URL!", data: nil)
             }
             
-            let (data, isSuccess) = await networkManager.put(url, data: buildBody(with: [
+            try await executePutAction(url, data: [
                 "Connected": value.representForAPI()
-            ]))
-            
-            guard isSuccess else {
-                throw Error(message: "Failed getting is connected status from remote!", data: data)
-            }
-            
-            guard let data = data else {
-                throw Error(message: "Response data isn't available!", data: nil)
-            }
-            
-            guard let payload = ApiPayload<NoValue>.decode(jsonData: data) else {
-                throw Error(message: "Failed parsing the response data!", data: data)
-            }
-            
-            try payload.checkForASCOMError()
+            ])
         }
         
         func buildActionURL(_ actionName: String) -> URL? {
