@@ -32,4 +32,25 @@ class NetworkManager {
             operationQueue.addOperation(operation)
         })
     }
+    
+    func put(_ url: URL, data: [AnyHashable: Any]) async -> (Data?, Bool) {
+        return await withCheckedContinuation({ continuation in
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = "PUT"
+            urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            
+            let bodyString = data
+                .map { (key: AnyHashable, value: Any) in
+                    "\(key)=\(value)"
+                }
+                .joined(separator: "&")
+            urlRequest.httpBody = bodyString.data(using: .utf8)
+            
+            let operation = HTTPOperation(downloader: downloader, urlRequest: urlRequest) { data, isSuccess in
+                continuation.resume(returning: (data, isSuccess))
+            }
+            
+            operationQueue.addOperation(operation)
+        })
+    }
 }
