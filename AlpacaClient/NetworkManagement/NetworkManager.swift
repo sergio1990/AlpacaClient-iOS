@@ -23,7 +23,7 @@ class NetworkManager {
     func `get`(_ url: URL, data: [String: String] = [:]) async -> (Data?, Bool) {
         return await withCheckedContinuation({ continuation in
             let queryItems: [URLQueryItem] = data.map { .init(name: $0.key, value: $0.value) }
-            var urlWithQueryItems = url.appending(queryItems: queryItems)
+            let urlWithQueryItems = url.appending(queryItems: queryItems)
             var urlRequest = URLRequest(url: urlWithQueryItems)
             urlRequest.httpMethod = "GET"
             
@@ -39,14 +39,16 @@ class NetworkManager {
         return await withCheckedContinuation({ continuation in
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = "PUT"
-            urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
             
             let bodyString = data
                 .map { (key: AnyHashable, value: String) in
                     "\(key)=\(value)"
                 }
                 .joined(separator: "&")
-            urlRequest.httpBody = bodyString.data(using: .utf8)
+            let bodyData = bodyString.data(using: .utf8)
+            urlRequest.httpBody = bodyData
+            urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            urlRequest.setValue(String(format: "%lu", bodyData?.count ?? 0), forHTTPHeaderField: "Content-Length")
             
             let operation = HTTPOperation(downloader: downloader, urlRequest: urlRequest) { data, isSuccess in
                 continuation.resume(returning: (data, isSuccess))
