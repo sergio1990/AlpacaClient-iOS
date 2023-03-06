@@ -20,12 +20,17 @@ extension ASCOMAlpaca.DeviceAPI {
         }
         
         func isMoving() async throws -> Bool {
-            guard let url = buildActionURL("ismoving") else {
-                throw ASCOMAlpaca.Error(message: "Invalid URL!", data: nil)
-            }
-            
-            let value: Bool = try await executeGetAction(url)
-            return value
+            try await getRemoteValue(for: "ismoving")
+        }
+        
+        func halt() async throws {
+            try await putRemoteValue(for: "halt")
+        }
+        
+        func move(position: Int32) async throws {
+            try await putRemoteValue(for: "move", data: [
+                "Position": String(position)
+            ])
         }
     }
 }
